@@ -1,0 +1,50 @@
+
+from  water_parser import * 
+
+
+
+def main():
+
+    time_start = time.time()
+    
+    url = 'https://www.vo-da.ru/tool/coeff-c'
+    input_field_city = "input__control"
+    drop_down_menu = '//*[@id="coeff_c_tool"]/div[2]/div/div/div/div[2]/div/ul/li[1]'
+
+    #create df
+    data_city_100 = pd.read_csv('city_100.csv')
+    columns_coeff_c = ['city', 'coeff_c']
+    df_coeff_c = pd.DataFrame(columns=columns_coeff_c)
+
+    #selenium parameters and init 
+    browser = start_browser(headless_on=True)
+    driver_coeff_c = browser.get(url)
+
+    #start parse 
+    for city in data_city_100['city']:
+
+        write_field_by_class_name(browser=browser, class_name=input_field_city, input=city)
+        time.sleep(1)
+        click_button_by_xpath(browser=browser, xpath=drop_down_menu)
+
+        soup_page = get_bs4_page(browser, parser='html.parser')
+        soup_find = soup_page.find(class_="disposal-tool-main-result", id='main_result_data')
+
+        df_city_one = pd.DataFrame([[city] + [soup_find.find('span').text]], columns=columns_coeff_c)
+        df_coeff_c = df_coeff_c.append(df_city_one)
+
+        # print(df_coeff_c.tail(1))
+
+
+    #edit df to final form 
+    df_coeff_c = df_coeff_c.set_index('city')
+    df_coeff_c.to_csv('df_coeff_c.csv')
+    
+    
+    print(f"--- {round((time.time() - time_start), 5)} seconds ---" )
+
+
+if __name__ == "__main__":
+    main()
+
+
