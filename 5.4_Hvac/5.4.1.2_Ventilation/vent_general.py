@@ -185,11 +185,17 @@ def calculate_air_pressure_loss_Pa(
         dynamic_pressure_pa = 0.5 * air_density * (velocity_m_s ** 2)
         print(f"dynamic_pressure_pa = {dynamic_pressure_pa}")
 
-        if reynolds_number < 100 and reynolds_number > 0:
-            # Calculate friction coefficient laminar flow
-            friction_coefficient = 0.3164/((reynolds_number) ** 0.25)
-        # elif reynolds_number > 1e5:
-        elif reynolds_number > 100:
+        if reynolds_number < 2300 and reynolds_number > 0:
+            # Calculate friction coefficient laminar flow (формула Пуазейля)
+            if shape == "circle":
+                friction_coefficient = 64 / reynolds_number
+            else:
+                friction_coefficient = 14.227 / reynolds_number
+
+        elif reynolds_number >= 2300 and reynolds_number < 4000:
+            # (Приближенная формула Блазиуса)
+            friction_coefficient = 0.316 / reynolds_number**0.25
+        elif reynolds_number >= 4000:
             # Calculate friction coefficient turbulent flow (А. Д. Альтшуль - МИСИ)
             friction_coefficient = 0.11 * ((roughness / equivalent_diameter) + (68 / reynolds_number)) ** 0.25
         else:
