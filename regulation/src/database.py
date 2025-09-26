@@ -43,3 +43,5 @@ def get_db_table_metadata():
         print("  Ограничения:")
         for constraint in table.constraints:
             print(f"    {constraint.name}: {constraint}")
+
+
