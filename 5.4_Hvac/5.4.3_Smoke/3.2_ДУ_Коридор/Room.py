@@ -1,10 +1,8 @@
-from Level import Level
 
 class Room:
     def __init__(self,
                  room_number: str,
                  room_name: str,
-                 room_level: Level,
                  room_area_m2: float,
                  room_high_m: float,
                  room_fire_load_density: float,
@@ -13,7 +11,6 @@ class Room:
         
         self.room_number = room_number
         self.room_name = room_name
-        self.room_level = room_level
         self.room_area_m2 = room_area_m2
         self.room_high_m = room_high_m
         self.room_volume_m3 = room_area_m2 * room_high_m
@@ -31,7 +28,6 @@ class Room:
         return {
             "number": self.room_number,
             "name": self.room_name,
-            "level": self.room_level,
             "area_m2": self.room_area_m2,
             "height_m": self.room_high_m,
             "volume_m3": self.room_volume_m3,

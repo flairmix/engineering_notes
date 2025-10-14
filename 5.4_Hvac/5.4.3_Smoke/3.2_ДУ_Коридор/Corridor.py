@@ -1,9 +1,7 @@
-from Level import Level
 
 class Corridor:
     def __init__(self,
                 corridor_number: str,
-                corridor_level: Level,
                 corridor_height_m: float,
                 corridor_door_height_m: float,
                 corridor_door_width_m: float,
@@ -14,7 +12,6 @@ class Corridor:
         
         # Основные параметры коридора
         self.corridor_number = corridor_number
-        self.corridor_level = corridor_level
         self.corridor_height_m = corridor_height_m
         self.corridor_door_height_m = corridor_door_height_m
         self.corridor_door_width_m = corridor_door_width_m
@@ -32,7 +29,6 @@ class Corridor:
         Возвращает строковое представление объекта Corridor
         """
         return (f"Коридор: {self.corridor_number}\n"
-                f"Уровень: {self.corridor_level}\n"
                 f"Высота: {self.corridor_height_m} м\n"
                 f"Площадь: {self.corridor_area_m2} м²\n"
                 f"Длина: {self.corridor_length_m} м\n"
@@ -44,7 +40,6 @@ class Corridor:
         """
         return {
             "corridor_number": self.corridor_number,
-            "level": self.corridor_level,
             "height_m": self.corridor_height_m,
             "door_height_m": self.corridor_door_height_m,
             "door_width_m": self.corridor_door_width_m,

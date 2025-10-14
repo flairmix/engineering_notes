@@ -3,7 +3,6 @@ from typing import Literal
 
 from Room import Room
 from Corridor import Corridor
-from Level import Level
 
 CALORIFIC_VALUE_WOOD = 13.8  # Низшая теплота сгорания древесины, МДж/кг
 
@@ -17,12 +16,11 @@ class Corridor_calculation():
     - расчет через плотность пожарной нагрузки (расчет плотности надо реализовать отдельно);
     """
     def __init__(self,
-                level: Level,
                 room: Room,
                 corridor: Corridor,
                 building_type = Literal['жилое', 'общественное'],
                 ):
-        self.number = f"{level.number}-{corridor.corridor_number}-{room.room_number}"
+        self.number = f"{corridor.corridor_number}-{room.room_number}"
         self.served_room = room
         self.served_corridor = corridor
         
