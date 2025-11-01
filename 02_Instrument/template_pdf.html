@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 100%;
+            box-sizing: border-box;
+            border: #2c3e50;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 4px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Отчёт по "Расчёту дымоприемных устройств"</h1>
+
+    <div>
+        <div><strong>Приложение # </strong><strong> {{ index }} </strong></div>
+        <div><strong>Проект: </strong> {{ project_name }}</div>
+        <div><strong>Дата: </strong> {{ date }}</div>
+        <div><strong>Система: </strong> {{ system_name }}</div>
+    </div>
+    
+    <h2>Описание расчета</h2>
+    <ul>
+        <li><strong>Параметр A:</strong> {{ params.a }}</li>
+    </ul>
+    
+    <h2>Результаты расчётов</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Наименование</th>
+                <th>Обозначение</th>
+                <th>Значение</th>
+                <th>Ед.изм.</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in results %}
+            <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.sign }}</td>
+                <td>{{ row.value }}</td>
+                <td>{{ row.unit }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <p><strong>Вывод:</strong> {{ conclusion }}</p>
+</body>
+</html>

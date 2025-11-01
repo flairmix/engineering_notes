@@ -15,6 +15,8 @@ class SmokeInlets:
         
         self.corridor_height_m = corridor_height_m
         self.G_min_kg_s = G_min_kg_s
+        self.inlet_position = inlet_position
+        self.door_height_m = door_height_m
         self.inlet_width_m = inlet_width_m
         self.inlet_height_m = inlet_height_m
         self.T_sm = T_sm
@@ -34,6 +36,7 @@ class SmokeInlets:
                                                )
         self.L_min = self.calculate_L_min(self.V_flow_to_one_inlet_max_m3_s)
         self.is_inlet_higher_then_door = door_height_m < round(corridor_height_m-0.05-inlet_height_m, 3)
+        self.velocity_smoke_inlet_m_s = round(self.L_min / (self.inlet_height_m*self.inlet_width_m), 3)
 
     @classmethod
     def calculate_equivalent_D(cls, A_m: float, B_m: float) -> float:
@@ -73,7 +76,7 @@ class SmokeInlets:
         if (T_sm - T_r) < 0:
             raise ValueError("Температура дымового слоя должна быть больше температуры воздуха.")
         
-        return 4.16 * gamma * d**(5/2) * ((T_sm - T_r) / T_r)**(1/2)
+        return round(4.16 * gamma * d**(5/2) * ((T_sm - T_r) / T_r)**(1/2), 3)
 
     def calculate_N_min(self, 
                        G_min_kg_s: float, 
@@ -102,7 +105,7 @@ class SmokeInlets:
         Возвращает:
         float: минимальное расстояние между устройствами (м).
         """
-        return 0.9 * V_max_m3_s**(1/2)
+        return round(0.9 * V_max_m3_s**(1/2), 3)
     
     def print_report(self):
         max_label_length = max(
@@ -132,9 +135,34 @@ class SmokeInlets:
             ("Макс. расход на дымоприемное устройство (м³/ч)", self.V_flow_to_one_inlet_max_m3_s*3600, "6.0f"),
             ("Количество дымоприемных устройств, шт", self.inlet_count_min, "6.1f"),
             ("Расстояние между дымоприемными устройствами мин, м", self.L_min, "6.1f"),
+            ("Скорость в решетке, м/c", self.velocity_smoke_inlet_m_s, "6.1f"),
         ]
         
         for label, value, fmt in parameters:
             report += f"{label:<{max_label_length}} {value:{fmt}}\n"
         
         print(report)
+
+    def report(self):
+        return [
+            {'name': 'Расход продуктов горения', 'sign': 'G', 'value': self.G_min_kg_s, 'unit': 'кг/с'},
+            {'name': 'Температура дыма', 'sign': 'Tsm', 'value': self.T_sm, 'unit': 'K'},
+            {'name': 'Высота коридора', 'sign': 'H', 'value': self.corridor_height_m, 'unit': 'м.'},
+            {'name': 'Высота двери', 'sign': 'Hd', 'value': self.door_height_m, 'unit': 'м.'},
+            {'name': 'Высота дымоприемного устройства', 'sign': 'h', 'value': self.inlet_height_m, 'unit': 'м.'},
+            {'name': 'Ширина дымоприемного устройства', 'sign': 'w', 'value': self.inlet_width_m, 'unit': 'м.'},
+            {'name': 'Эквивалентный диаметр', 'sign': 'D', 'value': self.equivalent_D, 'unit': 'м.'},
+            {'name': 'Отметка низа дымоприемного', 'sign': 'h_inlet', 'value': self.corridor_height_m - self.inlet_height_m, 'unit': 'м.'},
+            {'name': 'Расстояние до дымового слоя', 'sign': 'd', 'value': self.d, 'unit': 'м.'},
+            {'name': 'Отметка дымового слоя', 'sign': 'hsm', 'value': self.smoke_height_m, 'unit': 'м.'},
+            {'name': 'Выполнено ли условие по высоте?', 'sign': '-', 'value': self.is_d_enough, 'unit': '-'},
+            {'name': 'Выполнено ли условие по высоте выше двери?', 'sign': '-', 'value': self.is_inlet_higher_then_door, 'unit': '-'},
+            {'name': 'Температура воздуха', 'sign': 'Tr', 'value': self.T_r, 'unit': 'K'},
+            {'name': 'Макс. расход на дымоприемное устройство', 'sign': 'G_unit', 'value': self.V_flow_to_one_inlet_max_m3_s, 'unit': 'м³/с'},
+            {'name': 'Макс. расход на дымоприемное устройство', 'sign': 'G_unit', 'value': round(self.V_flow_to_one_inlet_max_m3_s*3600,3), 'unit': 'м³/ч'},
+            {'name': 'Количество дымоприемных устройств', 'sign': '-', 'value': self.inlet_count_min, 'unit': 'шт.'},
+            {'name': 'Расстояние между дымоприемными устройствами мин', 'sign': 'L_min', 'value': self.L_min, 'unit': 'м.'},
+            {'name': 'Расстояние между дымоприемными устройствами мин', 'sign': 'L_min', 'value': self.L_min, 'unit': 'м.'},
+            {'name': 'Скорость в решетке', 'sign': 'v', 'value': self.velocity_smoke_inlet_m_s, 'unit': 'м.'},
+
+    ]
