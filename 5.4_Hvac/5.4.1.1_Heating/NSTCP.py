@@ -1,10 +1,11 @@
 def calculation_NSTCP_W_m3C(
     GSOP: float,
-    building_volume_m3: float
+    building_volume_m3: float,
 ) -> float:
     """
     Calculate Normalized Specific Thermal Protection Characteristic (NSTCP).
-
+    (SP 50.13330.2012 (Thermal Protection of Buildings) 5.5)
+    
     Computes the normalized specific thermal protection characteristic of a building 
     according to regulatory methodology. The result is the maximum of two calculated
     coefficients (k1 and k2) that account for climate conditions and building volume.
