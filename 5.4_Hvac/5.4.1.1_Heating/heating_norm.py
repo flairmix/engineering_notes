@@ -1,12 +1,16 @@
+from typing import Literal
+
 def calculate_heating_norm_kW(
     building_volume_m3: float,
     NSTCP: float,
     temp_in: float = 18,
     temp_out: float = -23,
-    reserve: float = 0.05
+    reserve: float = 0.05,
+    localization: Literal['ru', 'en'] = 'ru',
+
 ) -> float:
     """
-    Calculate the normalized heating load (kW) meeting energy efficiency requirements 
+    Calculate the regulated heating load (kW) meeting energy efficiency requirements 
     per SP 50.13330.2012 (Thermal Protection of Buildings).
 
     This function computes the design heating load that ensures:
@@ -14,7 +18,7 @@ def calculate_heating_norm_kW(
     - compliance with energy efficiency standards;
     - adherence to regulatory thermal protection requirements.
 
-    The calculation is based on the **normalized specific thermal protection 
+    The calculation is based on the **regulated specific thermal protection 
     characteristic** (NSTCP, k_norm), which is a key parameter from SP 50.13330.2012.
     This value represents the maximum permissible heat loss per unit volume of the building
     and serves as an energy efficiency benchmark.
@@ -29,7 +33,7 @@ def calculate_heating_norm_kW(
         Q = k_norm × (1 − reserve) × (t_in − t_out) × V / 1000
     where:
         Q — design heating load (kW);
-        k_norm (NSTCP) — normalized specific thermal protection characteristic (W/(m³·°C));
+        k_norm (NSTCP) — regulated specific thermal protection characteristic (W/(m³·°C));
         reserve — safety factor (e.g., 0.05 = 5%);
         t_in — indoor design temperature (°C);
         t_out — outdoor design temperature (°C);
@@ -90,7 +94,17 @@ def calculate_heating_norm_kW(
         heating_load_W = NSTCP * (1 - reserve) * temperature_difference * building_volume_m3
         heating_load_kW = heating_load_W / 1000  # Convert W to kW
 
-        return round(heating_load_kW, 3)
+        label_ru = "Нагрузка отопления по 'теплозащитной характеристике здания' (кВТ)"
+        label_en = "Heating load by Thermal Protection requirements of Buildings (kW)"
+
+        if localization == 'en':
+            label = label_en
+        else: 
+            label = label_ru
+
+        return {
+            label : round(heating_load_kW, 3),
+            }
 
     except TypeError as e:
         print(f"Type error: {e}")

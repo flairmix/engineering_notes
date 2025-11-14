@@ -1,11 +1,14 @@
+from typing import Literal
+
 def calculation_NSTCP_W_m3C(
     GSOP: float,
     building_volume_m3: float,
+    localization: Literal['ru', 'en'] = 'ru',
 ) -> float:
     """
     Calculate Normalized Specific Thermal Protection Characteristic (NSTCP).
     (SP 50.13330.2012 (Thermal Protection of Buildings) 5.5)
-    
+
     Computes the normalized specific thermal protection characteristic of a building 
     according to regulatory methodology. The result is the maximum of two calculated
     coefficients (k1 and k2) that account for climate conditions and building volume.
@@ -67,7 +70,18 @@ def calculation_NSTCP_W_m3C(
 
         # Return maximum of k1 and k2, rounded to 3 decimals
         result = max(k1, k2)
-        return round(result, 3)
+
+        label_ru = "Нормируемое значение удельной теплозащитной характеристики здания (Вт/(м3·°C))"
+        label_en = "Regulated Specific Thermal Protection Characteristic of Building   (W/(m³·°C))"
+
+        if localization == 'en':
+            label = label_en
+        else: 
+            label = label_ru
+
+        return {
+            label : round(result, 3),
+            }
 
     except TypeError as e:
         print(f"Type error: {e}")

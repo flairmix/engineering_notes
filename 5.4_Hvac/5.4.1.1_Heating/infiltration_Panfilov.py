@@ -1,10 +1,12 @@
 import math
+from typing import Literal
 
 def calculate_infiltration_Pamfilova(
     temp_in: float = 18,
     temp_out: float = -23,
     building_height_m: float = 75,
     winf_velocity_m_s: float = 1.7,
+    localization: Literal['ru', 'en'] = 'ru',
 ) -> float:
     """
     Рассчитывает коэффициент инфильтрации по методу Памфилова.
@@ -73,8 +75,17 @@ def calculate_infiltration_Pamfilova(
             raise ValueError(f"Подкоренное выражение отрицательно: {inner_sqrt:.4f}")
 
         result = 0.01 * math.sqrt(inner_sqrt)
+        label_ru = "Коэффициент инфильтрации K"
+        label_en = "Coefficient infiltration K"
 
-        return round(result, 3)
+        if localization == 'en':
+            label = label_en
+        else: 
+            label = label_ru
+
+        return {
+            label : round(result, 3),
+            }
 
     except TypeError as e:
         print(f"Ошибка типа данных: {e}")
