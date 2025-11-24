@@ -1,0 +1,90 @@
+<h3>Гидравлический расчет водопроводных труб</h3>
+<p>
+    <h4>Расчетные формулы и структура</h4>
+    <p>
+        <div>Для гидравлического расчёта водопроводных труб обычно используют формулу:</div>
+        <div style="text-align: center; margin: 20px 0;">
+            <code>i = λ · <sup>1</sup>/<sub>diameter_m</sub> · <sup>velocity<sup>2</sup></sup>/<sub>2g</sub></code>   (1)
+        </div>
+        <div style="text-align: center; margin: 20px 0;">
+            <code>i_1000 = λ · <sup>1</sup>/<sub>diameter_mm</sub> · <sup>velocity<sup>2</sup></sup>/<sub>2g</sub></code> 
+        </div>
+            <div>где</div>
+        <ul>
+            <li ><code>i</code> - гидравличский уклон, м/м;</li>
+            <li ><code>i_1000</code> - гидравличский уклон, мм/м;</li>
+            <li ><code>λ</code> - коэффициент сопротивления трения по длине;</li>
+            <li ><code>diameter_m</code> - расчетный внутренний диамер трубы, м; </li>
+            <li><code>diameter_mm</code> — диаметр трубы, мм;</li>
+            <li ><code>velocity</code> - скорость движения воды, м/с;</li>
+            <li ><code>g</code> - ускорение свободного падения, м/с<sup>2</sup>;</li>
+
+        </ul>
+        </p>
+    </p>
+    <p>
+        <div>Для использования формулы (1) нобходимо установить зависимости для определения коэффициента λ.</div>
+    </p>
+
+    <div>Формулы расчёта параметра <code>i</code> в зависимости от типа трубы:</div>
+    <h4>1. Стальные и чугунные трубы (неновые)</h4>
+    <p>
+        <div>Для неновых труб (<code>steel_used</code>, <code>cast_iron_used</code>)</div>
+        <p>
+            <div>Если <code>velocity ≥ 1.2</code>:</div>
+            <div style="text-align: center; margin: 20px 0;">
+                <div>
+                    <code>i = 1000 * 0.00107 * (velocity**2 / (diameter_mm/1000) ** 1.3)</code> (6)
+                </div>
+            </div>
+            <p>Где:</p>
+            <ul>
+                <li><code>diameter_mm</code> — диаметр трубы, мм;</li>
+                <li>коэффициент <code>0.00107</code> — константа из формулы;</li>
+            </ul>
+        </p>
+        <p>
+            <div>Если <code>velocity < 1.2</code>:</div>
+            <div style="text-align: center; margin: 20px 0;">
+                <div>
+                    <code>i = 1000 * 0.000912 * ((velocity**2 / (diameter_mm/1000) ** 1.3)) * pow(1 + (0.867/velocity), 0.3)</code> (7)
+                </div>
+            </div>
+            <p>Где:</p>
+            <ul>
+                <li>добавляется множитель <code>pow(1 + (0.867/velocity), 0.3)</code> для учёта низкой скорости потока;</li>
+                <li>коэффициент <code>0.000912</code> — константа из формулы.</li>
+            </ul>
+        </p>
+    </p>
+
+    <h4>2. Стальные трубы (новые)</h4>
+    <p>
+        <div>В результате исследований, проведённых во ВНИИ ВОДГЕО, получены следующие зависимости для коэффициента λ:</div>
+        <div style="text-align: center; margin: 20px 0;"><code>λ = 0.312 / d<sub>p</sub><sup>0.226</sup> × (1.9 × 10<sup>–6</sup> + velocity/υ)<sup>0.226</sup></code>(2)</div>
+        <div style="text-align: center; margin: 20px 0;"><code>lambda = 0.312 / (diameter_m ** 0.226) * ((1.9e-6 + velocity / nu) ** 0.226)</code></div>
+        <div>где <strong>velocity</strong> — кинематический коэффициент вязкости воды, м²/с.</div>
+    </p>
+    <p>
+    <div>Для гидравлического расчёта водопроводных труб с достаточной для практических целей точностью можно принять:
+        <strong>velocity = 1.3 × 10<sup>–6</sup> м²/с</strong>, что соответствует температуре воды 10 °C.</div>
+        
+        <div>При этом значении <strong>velocity</strong> формуле (2) можно придать вид:</div>
+        <div style="text-align: center; margin: 20px 0;"><code>λ = 0.0159 / d<sub>p</sub><sup>0.226</sup> × (1 + 0.684/velocity)<sup>0.226</sup></code>(2a)</div>
+        <div style="text-align: center; margin: 20px 0;"><code>lambda = 0.0159 / (diameter_m ** 0.226) * ((1 + 0.684 / velocity) ** 0.226)</code></div>
+    </p> 
+    <h4>2. Чугунные трубы (новые)</h4>
+    <p>
+        <div style="text-align: center; margin: 20px 0;"><code>λ = 0.863 / d<sub>p</sub><sup>0.284</sup> × (0.55 × 10<sup>–6</sup> + velocity/velocity)<sup>0.284</sup> (3)</div>
+        <div style="text-align: center; margin: 20px 0;"><code>lambda = 0.863 / (diameter_m ** 0.284) * ((0.55e-6 + velocity / velocity) ** 0.284)</code></div>
+
+        <p>Или, приняв <strong>velocity = 1.3 × 10<sup>–6</sup> м²/с</strong>:</p>
+        <div style="text-align: center; margin: 20px 0;"><code>λ = 0.0144 / d<sub>p</sub><sup>0.284</sup> × (1 + 2.36/velocity)<sup>0.284</sup></code>(3a)</div>
+        <div style="text-align: center; margin: 20px 0;"><code>lambda = 0.0144 / (diameter_m ** 0.284) * ((1 + 2.36 / velocity) ** 0.284)</code></div>
+    </p>
+
+<h4>Ссылки:</h4>
+<ol>
+    <p><i>- "Таблицы для Гидравлического расчета водлопроводных труб".</i>Справочное пособие. Ф.А.Шевелев, А.Ф.Шевелев. Москва, Строиздат, 1984</p>
+</ol>
+
