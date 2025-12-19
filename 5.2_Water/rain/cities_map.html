@@ -1,0 +1,2501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_39d6effc239707af30c0e73848abfb1a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_39d6effc239707af30c0e73848abfb1a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_39d6effc239707af30c0e73848abfb1a = L.map(
+                "map_39d6effc239707af30c0e73848abfb1a",
+                {
+                    center: [60.0, 100.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0b90c16dac064ae0b955c7a4f7bd0a9f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0b90c16dac064ae0b955c7a4f7bd0a9f.addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+            var marker_cf4dfed72d6478aefb733b64d79e79be = L.marker(
+                [55.7558, 37.6173],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_d486ca9a7240e6e84a3e23ff68411e09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c12447ae12e7a4a84457e9fdbde3bebd = $(`<div id="html_c12447ae12e7a4a84457e9fdbde3bebd" style="width: 100.0%; height: 100.0%;">Москва</div>`)[0];
+                popup_d486ca9a7240e6e84a3e23ff68411e09.setContent(html_c12447ae12e7a4a84457e9fdbde3bebd);
+            
+        
+
+        marker_cf4dfed72d6478aefb733b64d79e79be.bindPopup(popup_d486ca9a7240e6e84a3e23ff68411e09)
+        ;
+
+        
+    
+    
+            var marker_ae96c8a1602e271373d428c21ba2979c = L.marker(
+                [59.9343, 30.3351],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_b7515f6ed3ff3d5af5e687d27504d473 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32a34d41bbb03e30c6cb78e26eedbc28 = $(`<div id="html_32a34d41bbb03e30c6cb78e26eedbc28" style="width: 100.0%; height: 100.0%;">Санкт-Петербург</div>`)[0];
+                popup_b7515f6ed3ff3d5af5e687d27504d473.setContent(html_32a34d41bbb03e30c6cb78e26eedbc28);
+            
+        
+
+        marker_ae96c8a1602e271373d428c21ba2979c.bindPopup(popup_b7515f6ed3ff3d5af5e687d27504d473)
+        ;
+
+        
+    
+    
+            var marker_8b206f27e388350bbfb5cdc3743e6f31 = L.marker(
+                [55.0302, 82.9204],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_1558b24059b74d7839ca6f7b852737fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76b21c062962bc8e582ed93cff74fc0e = $(`<div id="html_76b21c062962bc8e582ed93cff74fc0e" style="width: 100.0%; height: 100.0%;">Новосибирск</div>`)[0];
+                popup_1558b24059b74d7839ca6f7b852737fa.setContent(html_76b21c062962bc8e582ed93cff74fc0e);
+            
+        
+
+        marker_8b206f27e388350bbfb5cdc3743e6f31.bindPopup(popup_1558b24059b74d7839ca6f7b852737fa)
+        ;
+
+        
+    
+    
+            var marker_883de9cdc5c1a76166ff6e10dc6b25de = L.marker(
+                [56.838, 60.5975],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_bb8f30ff5602a7bd3050deb7e7bfe983 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76685e4bede8fc01a083b080ddba1bcd = $(`<div id="html_76685e4bede8fc01a083b080ddba1bcd" style="width: 100.0%; height: 100.0%;">Екатеринбург</div>`)[0];
+                popup_bb8f30ff5602a7bd3050deb7e7bfe983.setContent(html_76685e4bede8fc01a083b080ddba1bcd);
+            
+        
+
+        marker_883de9cdc5c1a76166ff6e10dc6b25de.bindPopup(popup_bb8f30ff5602a7bd3050deb7e7bfe983)
+        ;
+
+        
+    
+    
+            var marker_fbabac7e091bc9d2569495d7efdf6186 = L.marker(
+                [56.3287, 44.002],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_53e00524e83b89496a05121449c40f3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33d0142e696dafd305608971dfe804bb = $(`<div id="html_33d0142e696dafd305608971dfe804bb" style="width: 100.0%; height: 100.0%;">Нижний Новгород</div>`)[0];
+                popup_53e00524e83b89496a05121449c40f3e.setContent(html_33d0142e696dafd305608971dfe804bb);
+            
+        
+
+        marker_fbabac7e091bc9d2569495d7efdf6186.bindPopup(popup_53e00524e83b89496a05121449c40f3e)
+        ;
+
+        
+    
+    
+            var marker_3c149a0c1cabf9428930d0359f512608 = L.marker(
+                [55.7964, 49.1088],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_42c81a477757499e5b0185d33aa60953 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce3da4b43c9f074f0387524ecbd68d5d = $(`<div id="html_ce3da4b43c9f074f0387524ecbd68d5d" style="width: 100.0%; height: 100.0%;">Казань</div>`)[0];
+                popup_42c81a477757499e5b0185d33aa60953.setContent(html_ce3da4b43c9f074f0387524ecbd68d5d);
+            
+        
+
+        marker_3c149a0c1cabf9428930d0359f512608.bindPopup(popup_42c81a477757499e5b0185d33aa60953)
+        ;
+
+        
+    
+    
+            var marker_f40dfd6bf3f27cc84de3f6436bb191ef = L.marker(
+                [53.1959, 50.1],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_9977ad486ee544e013ff30ad348e0a37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3e53ba7e5ec4019c692338a9c20ed0c = $(`<div id="html_c3e53ba7e5ec4019c692338a9c20ed0c" style="width: 100.0%; height: 100.0%;">Самара</div>`)[0];
+                popup_9977ad486ee544e013ff30ad348e0a37.setContent(html_c3e53ba7e5ec4019c692338a9c20ed0c);
+            
+        
+
+        marker_f40dfd6bf3f27cc84de3f6436bb191ef.bindPopup(popup_9977ad486ee544e013ff30ad348e0a37)
+        ;
+
+        
+    
+    
+            var marker_7e4274228e02b34dfd27604d2e55c7b3 = L.marker(
+                [54.9924, 73.3686],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_d66eb5312e458c84f7de990b8c0a0046 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f896d012efc2d690051fdfe55b333abc = $(`<div id="html_f896d012efc2d690051fdfe55b333abc" style="width: 100.0%; height: 100.0%;">Омск</div>`)[0];
+                popup_d66eb5312e458c84f7de990b8c0a0046.setContent(html_f896d012efc2d690051fdfe55b333abc);
+            
+        
+
+        marker_7e4274228e02b34dfd27604d2e55c7b3.bindPopup(popup_d66eb5312e458c84f7de990b8c0a0046)
+        ;
+
+        
+    
+    
+            var marker_a11b111d13bf047e2436a84f76b04158 = L.marker(
+                [55.1598, 61.4025],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_bd99ba8edff1496b2e26106d8d65e2f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_518bc745422ea6b82330e33c4c63ec1f = $(`<div id="html_518bc745422ea6b82330e33c4c63ec1f" style="width: 100.0%; height: 100.0%;">Челябинск</div>`)[0];
+                popup_bd99ba8edff1496b2e26106d8d65e2f1.setContent(html_518bc745422ea6b82330e33c4c63ec1f);
+            
+        
+
+        marker_a11b111d13bf047e2436a84f76b04158.bindPopup(popup_bd99ba8edff1496b2e26106d8d65e2f1)
+        ;
+
+        
+    
+    
+            var marker_1193544c69be0877eb49f468d8d09fa0 = L.marker(
+                [47.222, 39.7203],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_e84c4541d44937a3230f25366a34b675 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c736d3c7b36d7b623ca28c33ef63c402 = $(`<div id="html_c736d3c7b36d7b623ca28c33ef63c402" style="width: 100.0%; height: 100.0%;">Ростов-на-Дону</div>`)[0];
+                popup_e84c4541d44937a3230f25366a34b675.setContent(html_c736d3c7b36d7b623ca28c33ef63c402);
+            
+        
+
+        marker_1193544c69be0877eb49f468d8d09fa0.bindPopup(popup_e84c4541d44937a3230f25366a34b675)
+        ;
+
+        
+    
+    
+            var marker_e27956604687dbfff71b3e35c2a27aca = L.marker(
+                [54.7352, 55.9587],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_0e1c4a5e62823d86dd0d5750159739fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85793b4eee396c384a933f8ba4e59d20 = $(`<div id="html_85793b4eee396c384a933f8ba4e59d20" style="width: 100.0%; height: 100.0%;">Уфа</div>`)[0];
+                popup_0e1c4a5e62823d86dd0d5750159739fa.setContent(html_85793b4eee396c384a933f8ba4e59d20);
+            
+        
+
+        marker_e27956604687dbfff71b3e35c2a27aca.bindPopup(popup_0e1c4a5e62823d86dd0d5750159739fa)
+        ;
+
+        
+    
+    
+            var marker_42e0709372a39058a4f1ff16f74801f7 = L.marker(
+                [48.7079, 44.5126],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_80b0ac058721e8f11ce74764e0024e0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9b7767e4acc1160eaca5d8307e8092f = $(`<div id="html_a9b7767e4acc1160eaca5d8307e8092f" style="width: 100.0%; height: 100.0%;">Волгоград</div>`)[0];
+                popup_80b0ac058721e8f11ce74764e0024e0e.setContent(html_a9b7767e4acc1160eaca5d8307e8092f);
+            
+        
+
+        marker_42e0709372a39058a4f1ff16f74801f7.bindPopup(popup_80b0ac058721e8f11ce74764e0024e0e)
+        ;
+
+        
+    
+    
+            var marker_8c2e1a268e20b56cd31936b07a9e83e8 = L.marker(
+                [58.0105, 56.2502],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_2f8c64d6ee97b39667bcd5509e77397c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_877bc40d3037b5582b2575dbbf760b5e = $(`<div id="html_877bc40d3037b5582b2575dbbf760b5e" style="width: 100.0%; height: 100.0%;">Пермь</div>`)[0];
+                popup_2f8c64d6ee97b39667bcd5509e77397c.setContent(html_877bc40d3037b5582b2575dbbf760b5e);
+            
+        
+
+        marker_8c2e1a268e20b56cd31936b07a9e83e8.bindPopup(popup_2f8c64d6ee97b39667bcd5509e77397c)
+        ;
+
+        
+    
+    
+            var marker_8147038a43fcc1990bb8979be7758991 = L.marker(
+                [56.0106, 92.8526],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_b0926a3ed7f66c5503168a8aaed86b20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8da52a5345fa82ce2d602ad1da11e9f3 = $(`<div id="html_8da52a5345fa82ce2d602ad1da11e9f3" style="width: 100.0%; height: 100.0%;">Красноярск</div>`)[0];
+                popup_b0926a3ed7f66c5503168a8aaed86b20.setContent(html_8da52a5345fa82ce2d602ad1da11e9f3);
+            
+        
+
+        marker_8147038a43fcc1990bb8979be7758991.bindPopup(popup_b0926a3ed7f66c5503168a8aaed86b20)
+        ;
+
+        
+    
+    
+            var marker_e292a006c9fea380341e803c9bfea381 = L.marker(
+                [51.6606, 39.2006],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_370cde6d137aecfbaa6b4d976fe423f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_505370787b489f53fae4a5e09dcbdb8d = $(`<div id="html_505370787b489f53fae4a5e09dcbdb8d" style="width: 100.0%; height: 100.0%;">Воронеж</div>`)[0];
+                popup_370cde6d137aecfbaa6b4d976fe423f5.setContent(html_505370787b489f53fae4a5e09dcbdb8d);
+            
+        
+
+        marker_e292a006c9fea380341e803c9bfea381.bindPopup(popup_370cde6d137aecfbaa6b4d976fe423f5)
+        ;
+
+        
+    
+    
+            var marker_ed1c5022c7f28b0daaceab4c5ce3dd53 = L.marker(
+                [51.5335, 46.0342],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_951a123a151eab69e5a3891fd72daa21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_332c97f1f3e5a3d350cf8616a08b7c5a = $(`<div id="html_332c97f1f3e5a3d350cf8616a08b7c5a" style="width: 100.0%; height: 100.0%;">Саратов</div>`)[0];
+                popup_951a123a151eab69e5a3891fd72daa21.setContent(html_332c97f1f3e5a3d350cf8616a08b7c5a);
+            
+        
+
+        marker_ed1c5022c7f28b0daaceab4c5ce3dd53.bindPopup(popup_951a123a151eab69e5a3891fd72daa21)
+        ;
+
+        
+    
+    
+            var marker_02ef58032e82b7b9032ac20cf8b4a363 = L.marker(
+                [45.0355, 38.9753],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_cc87c5c9b44025a5b6cb60d588f54997 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1038052aec9f0a2d0ec05107d42d89ae = $(`<div id="html_1038052aec9f0a2d0ec05107d42d89ae" style="width: 100.0%; height: 100.0%;">Краснодар</div>`)[0];
+                popup_cc87c5c9b44025a5b6cb60d588f54997.setContent(html_1038052aec9f0a2d0ec05107d42d89ae);
+            
+        
+
+        marker_02ef58032e82b7b9032ac20cf8b4a363.bindPopup(popup_cc87c5c9b44025a5b6cb60d588f54997)
+        ;
+
+        
+    
+    
+            var marker_fe93b9bbe03831db6475c583798b585c = L.marker(
+                [53.5084, 49.4167],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_9cf1847fb98747c515367d8088e95125 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7731afecd99bf0ad75ea65eefe447696 = $(`<div id="html_7731afecd99bf0ad75ea65eefe447696" style="width: 100.0%; height: 100.0%;">Тольятти</div>`)[0];
+                popup_9cf1847fb98747c515367d8088e95125.setContent(html_7731afecd99bf0ad75ea65eefe447696);
+            
+        
+
+        marker_fe93b9bbe03831db6475c583798b585c.bindPopup(popup_9cf1847fb98747c515367d8088e95125)
+        ;
+
+        
+    
+    
+            var marker_7f6173cfb86b191f7534872a3dcc24f0 = L.marker(
+                [53.3467, 83.7765],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_d67092a12d236323db935249e236ce0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2eb93fbc019ad39d4688d22bc2c3285a = $(`<div id="html_2eb93fbc019ad39d4688d22bc2c3285a" style="width: 100.0%; height: 100.0%;">Барнаул</div>`)[0];
+                popup_d67092a12d236323db935249e236ce0f.setContent(html_2eb93fbc019ad39d4688d22bc2c3285a);
+            
+        
+
+        marker_7f6173cfb86b191f7534872a3dcc24f0.bindPopup(popup_d67092a12d236323db935249e236ce0f)
+        ;
+
+        
+    
+    
+            var marker_298c8ca174b6056288f4ca47aea45a9c = L.marker(
+                [56.8526, 53.2468],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_f1ffee29c8d769a1f4d826ee46a6da21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a4052f3bd48c6bd514ce475c844439f = $(`<div id="html_0a4052f3bd48c6bd514ce475c844439f" style="width: 100.0%; height: 100.0%;">Ижевск</div>`)[0];
+                popup_f1ffee29c8d769a1f4d826ee46a6da21.setContent(html_0a4052f3bd48c6bd514ce475c844439f);
+            
+        
+
+        marker_298c8ca174b6056288f4ca47aea45a9c.bindPopup(popup_f1ffee29c8d769a1f4d826ee46a6da21)
+        ;
+
+        
+    
+    
+            var marker_a05af3c2a126f3db3879c71aa8429a00 = L.marker(
+                [54.3167, 48.3986],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_74f54f6804c9fc29e8cb2dec31f7dd75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_331e9e9154b51802a297c6d3a33bfadc = $(`<div id="html_331e9e9154b51802a297c6d3a33bfadc" style="width: 100.0%; height: 100.0%;">Ульяновск</div>`)[0];
+                popup_74f54f6804c9fc29e8cb2dec31f7dd75.setContent(html_331e9e9154b51802a297c6d3a33bfadc);
+            
+        
+
+        marker_a05af3c2a126f3db3879c71aa8429a00.bindPopup(popup_74f54f6804c9fc29e8cb2dec31f7dd75)
+        ;
+
+        
+    
+    
+            var marker_5cf9bfd967c773cfe4f84d2618fea4a2 = L.marker(
+                [43.1155, 131.8855],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_4119059ecbf73d5da7287647baee22f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b362a01c1e99964735eb486ba35ca5a9 = $(`<div id="html_b362a01c1e99964735eb486ba35ca5a9" style="width: 100.0%; height: 100.0%;">Владивосток</div>`)[0];
+                popup_4119059ecbf73d5da7287647baee22f9.setContent(html_b362a01c1e99964735eb486ba35ca5a9);
+            
+        
+
+        marker_5cf9bfd967c773cfe4f84d2618fea4a2.bindPopup(popup_4119059ecbf73d5da7287647baee22f9)
+        ;
+
+        
+    
+    
+            var marker_62dc44ba4129115edccb92f70cf3bac2 = L.marker(
+                [57.6266, 39.8937],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_d0cc417a7414011b710d0d9b32182c5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62572d4789eec8948d4842e5d9b9f1e9 = $(`<div id="html_62572d4789eec8948d4842e5d9b9f1e9" style="width: 100.0%; height: 100.0%;">Ярославль</div>`)[0];
+                popup_d0cc417a7414011b710d0d9b32182c5b.setContent(html_62572d4789eec8948d4842e5d9b9f1e9);
+            
+        
+
+        marker_62dc44ba4129115edccb92f70cf3bac2.bindPopup(popup_d0cc417a7414011b710d0d9b32182c5b)
+        ;
+
+        
+    
+    
+            var marker_4571b59b99f4f7dcc4c6f40543397703 = L.marker(
+                [52.2978, 104.2964],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_64b51619cbed4369d712e73a469cd636 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f8bf96a67fb6b7f511e23d5505429ae = $(`<div id="html_4f8bf96a67fb6b7f511e23d5505429ae" style="width: 100.0%; height: 100.0%;">Иркутск</div>`)[0];
+                popup_64b51619cbed4369d712e73a469cd636.setContent(html_4f8bf96a67fb6b7f511e23d5505429ae);
+            
+        
+
+        marker_4571b59b99f4f7dcc4c6f40543397703.bindPopup(popup_64b51619cbed4369d712e73a469cd636)
+        ;
+
+        
+    
+    
+            var marker_d3c60f4797ae5fb715f3a6bc31d6e004 = L.marker(
+                [57.153, 65.5324],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_dc486f0d703535b6159790f84960dcea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1657602707d83086ed8023b6ea2e4e34 = $(`<div id="html_1657602707d83086ed8023b6ea2e4e34" style="width: 100.0%; height: 100.0%;">Тюмень</div>`)[0];
+                popup_dc486f0d703535b6159790f84960dcea.setContent(html_1657602707d83086ed8023b6ea2e4e34);
+            
+        
+
+        marker_d3c60f4797ae5fb715f3a6bc31d6e004.bindPopup(popup_dc486f0d703535b6159790f84960dcea)
+        ;
+
+        
+    
+    
+            var marker_c682c1dab6e482edd7db467ce918f61c = L.marker(
+                [42.9839, 47.5047],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_bbbccc3eb19c876f3eba87c890a50056 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13a371e1e2091511b4c8ebcb628d2e18 = $(`<div id="html_13a371e1e2091511b4c8ebcb628d2e18" style="width: 100.0%; height: 100.0%;">Махачкала</div>`)[0];
+                popup_bbbccc3eb19c876f3eba87c890a50056.setContent(html_13a371e1e2091511b4c8ebcb628d2e18);
+            
+        
+
+        marker_c682c1dab6e482edd7db467ce918f61c.bindPopup(popup_bbbccc3eb19c876f3eba87c890a50056)
+        ;
+
+        
+    
+    
+            var marker_3fad345c9315c95dd11992768b2e0ff5 = L.marker(
+                [48.4837, 135.0764],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_963a0194abec5c1ac26fbb4454a6fa4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b49e30bd0f683a8d3d535e2c282aa2d = $(`<div id="html_0b49e30bd0f683a8d3d535e2c282aa2d" style="width: 100.0%; height: 100.0%;">Хабаровск</div>`)[0];
+                popup_963a0194abec5c1ac26fbb4454a6fa4a.setContent(html_0b49e30bd0f683a8d3d535e2c282aa2d);
+            
+        
+
+        marker_3fad345c9315c95dd11992768b2e0ff5.bindPopup(popup_963a0194abec5c1ac26fbb4454a6fa4a)
+        ;
+
+        
+    
+    
+            var marker_31762dbab85668d553245beb1715efb3 = L.marker(
+                [51.768, 55.0989],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_30449ab39cc9df959565b2a7d21e7057 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f416cadaacaec35eb714493e11a06859 = $(`<div id="html_f416cadaacaec35eb714493e11a06859" style="width: 100.0%; height: 100.0%;">Оренбург</div>`)[0];
+                popup_30449ab39cc9df959565b2a7d21e7057.setContent(html_f416cadaacaec35eb714493e11a06859);
+            
+        
+
+        marker_31762dbab85668d553245beb1715efb3.bindPopup(popup_30449ab39cc9df959565b2a7d21e7057)
+        ;
+
+        
+    
+    
+            var marker_adff00e141fefc3a28abfa5c11197d06 = L.marker(
+                [53.7578, 87.1162],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_45032a823b5cffec7b11bd27480b3e9c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75fafd2e871506ebffb4bffb3d0512dd = $(`<div id="html_75fafd2e871506ebffb4bffb3d0512dd" style="width: 100.0%; height: 100.0%;">Новокузнецк</div>`)[0];
+                popup_45032a823b5cffec7b11bd27480b3e9c.setContent(html_75fafd2e871506ebffb4bffb3d0512dd);
+            
+        
+
+        marker_adff00e141fefc3a28abfa5c11197d06.bindPopup(popup_45032a823b5cffec7b11bd27480b3e9c)
+        ;
+
+        
+    
+    
+            var marker_1b5072eb440944dd53c791e00a454a26 = L.marker(
+                [55.3547, 86.0881],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_1273f05428251cd59003a721427ef961 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4042ce13b69a9c7595d3d764dedfba5b = $(`<div id="html_4042ce13b69a9c7595d3d764dedfba5b" style="width: 100.0%; height: 100.0%;">Кемерово</div>`)[0];
+                popup_1273f05428251cd59003a721427ef961.setContent(html_4042ce13b69a9c7595d3d764dedfba5b);
+            
+        
+
+        marker_1b5072eb440944dd53c791e00a454a26.bindPopup(popup_1273f05428251cd59003a721427ef961)
+        ;
+
+        
+    
+    
+            var marker_020a93c82147602c8bbb79d71560ff4d = L.marker(
+                [54.6236, 39.7699],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_1ed851305438a90e79ef952e0a970953 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b0bc77b9ee1cfeef9d81c412726911f = $(`<div id="html_5b0bc77b9ee1cfeef9d81c412726911f" style="width: 100.0%; height: 100.0%;">Рязань</div>`)[0];
+                popup_1ed851305438a90e79ef952e0a970953.setContent(html_5b0bc77b9ee1cfeef9d81c412726911f);
+            
+        
+
+        marker_020a93c82147602c8bbb79d71560ff4d.bindPopup(popup_1ed851305438a90e79ef952e0a970953)
+        ;
+
+        
+    
+    
+            var marker_72f6bddfa269ab90b5dfc0fa3e69fb32 = L.marker(
+                [56.4978, 84.9577],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_cc7fcd0f5654c4661dda7a86a1c25016 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a83042da09d8ca22987fc3ebe5483da = $(`<div id="html_2a83042da09d8ca22987fc3ebe5483da" style="width: 100.0%; height: 100.0%;">Томск</div>`)[0];
+                popup_cc7fcd0f5654c4661dda7a86a1c25016.setContent(html_2a83042da09d8ca22987fc3ebe5483da);
+            
+        
+
+        marker_72f6bddfa269ab90b5dfc0fa3e69fb32.bindPopup(popup_cc7fcd0f5654c4661dda7a86a1c25016)
+        ;
+
+        
+    
+    
+            var marker_328458b819ddbb13465ce06fdfc8dd8f = L.marker(
+                [46.3497, 48.0408],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_3548bca6b8c1e2093604eba796010f23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1849a43cffd3729d394ba2222ae00d20 = $(`<div id="html_1849a43cffd3729d394ba2222ae00d20" style="width: 100.0%; height: 100.0%;">Астрахань</div>`)[0];
+                popup_3548bca6b8c1e2093604eba796010f23.setContent(html_1849a43cffd3729d394ba2222ae00d20);
+            
+        
+
+        marker_328458b819ddbb13465ce06fdfc8dd8f.bindPopup(popup_3548bca6b8c1e2093604eba796010f23)
+        ;
+
+        
+    
+    
+            var marker_21979e24fdf759170a44b64beba09c44 = L.marker(
+                [53.1956, 45.0185],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_9579172fa5cf8af7cd5e746c96269d66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53786a2eff9f8f61a0599d4b1265ed69 = $(`<div id="html_53786a2eff9f8f61a0599d4b1265ed69" style="width: 100.0%; height: 100.0%;">Пенза</div>`)[0];
+                popup_9579172fa5cf8af7cd5e746c96269d66.setContent(html_53786a2eff9f8f61a0599d4b1265ed69);
+            
+        
+
+        marker_21979e24fdf759170a44b64beba09c44.bindPopup(popup_9579172fa5cf8af7cd5e746c96269d66)
+        ;
+
+        
+    
+    
+            var marker_ae0a9b07381fd0ca3ef7db8447f2cb32 = L.marker(
+                [55.7315, 52.3966],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_13e91fd42b096640a0a0304cf7cbb38c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3624ad92153a4c8d4b953918a2377922 = $(`<div id="html_3624ad92153a4c8d4b953918a2377922" style="width: 100.0%; height: 100.0%;">Набережные Челны</div>`)[0];
+                popup_13e91fd42b096640a0a0304cf7cbb38c.setContent(html_3624ad92153a4c8d4b953918a2377922);
+            
+        
+
+        marker_ae0a9b07381fd0ca3ef7db8447f2cb32.bindPopup(popup_13e91fd42b096640a0a0304cf7cbb38c)
+        ;
+
+        
+    
+    
+            var marker_b8fdcdaf4b9e0bedc23720aad5bd3f05 = L.marker(
+                [52.6036, 39.5707],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_a662c103dda2f07137900b0b4c766b67 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b7e8060218efbbb41e5bab600b64ec7 = $(`<div id="html_2b7e8060218efbbb41e5bab600b64ec7" style="width: 100.0%; height: 100.0%;">Липецк</div>`)[0];
+                popup_a662c103dda2f07137900b0b4c766b67.setContent(html_2b7e8060218efbbb41e5bab600b64ec7);
+            
+        
+
+        marker_b8fdcdaf4b9e0bedc23720aad5bd3f05.bindPopup(popup_a662c103dda2f07137900b0b4c766b67)
+        ;
+
+        
+    
+    
+            var marker_f91f9cf47b005e46b022eb800bd5da18 = L.marker(
+                [54.1936, 37.6177],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_41a6958430c7155147b3f0e7960530f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3eff4c61b6feadec1b671db49b1bf0a = $(`<div id="html_f3eff4c61b6feadec1b671db49b1bf0a" style="width: 100.0%; height: 100.0%;">Тула</div>`)[0];
+                popup_41a6958430c7155147b3f0e7960530f9.setContent(html_f3eff4c61b6feadec1b671db49b1bf0a);
+            
+        
+
+        marker_f91f9cf47b005e46b022eb800bd5da18.bindPopup(popup_41a6958430c7155147b3f0e7960530f9)
+        ;
+
+        
+    
+    
+            var marker_b464b77220aa8022a49fffda272fd76d = L.marker(
+                [58.5966, 49.6601],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_a867923cbec954bf23caaba267d5c420 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fcf4a58871b732a1d7051183641ee6c = $(`<div id="html_8fcf4a58871b732a1d7051183641ee6c" style="width: 100.0%; height: 100.0%;">Киров</div>`)[0];
+                popup_a867923cbec954bf23caaba267d5c420.setContent(html_8fcf4a58871b732a1d7051183641ee6c);
+            
+        
+
+        marker_b464b77220aa8022a49fffda272fd76d.bindPopup(popup_a867923cbec954bf23caaba267d5c420)
+        ;
+
+        
+    
+    
+            var marker_f703b4bc7d6c47b422b0a693147ddc69 = L.marker(
+                [56.1309, 47.2517],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_ed667a0d385795220185713505575f84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c840e1732edcc73be22a476676ccb1d2 = $(`<div id="html_c840e1732edcc73be22a476676ccb1d2" style="width: 100.0%; height: 100.0%;">Чебоксары</div>`)[0];
+                popup_ed667a0d385795220185713505575f84.setContent(html_c840e1732edcc73be22a476676ccb1d2);
+            
+        
+
+        marker_f703b4bc7d6c47b422b0a693147ddc69.bindPopup(popup_ed667a0d385795220185713505575f84)
+        ;
+
+        
+    
+    
+            var marker_67c35bd6c16a71a521b9181bd0882d43 = L.marker(
+                [51.8348, 107.5845],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_47d303ea9af2a21d2844940d2fd332ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ecc2ec4af894dfbe2791d9f4377c13d1 = $(`<div id="html_ecc2ec4af894dfbe2791d9f4377c13d1" style="width: 100.0%; height: 100.0%;">Улан-Удэ</div>`)[0];
+                popup_47d303ea9af2a21d2844940d2fd332ac.setContent(html_ecc2ec4af894dfbe2791d9f4377c13d1);
+            
+        
+
+        marker_67c35bd6c16a71a521b9181bd0882d43.bindPopup(popup_47d303ea9af2a21d2844940d2fd332ac)
+        ;
+
+        
+    
+    
+            var marker_5bc4155b5899bfd9c6d906e9f0f61167 = L.marker(
+                [54.7101, 20.4991],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_e22158a1b7828bbc2faeabd3dda97a51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40c79ee5c785229b248e115e8f7678a6 = $(`<div id="html_40c79ee5c785229b248e115e8f7678a6" style="width: 100.0%; height: 100.0%;">Калининград</div>`)[0];
+                popup_e22158a1b7828bbc2faeabd3dda97a51.setContent(html_40c79ee5c785229b248e115e8f7678a6);
+            
+        
+
+        marker_5bc4155b5899bfd9c6d906e9f0f61167.bindPopup(popup_e22158a1b7828bbc2faeabd3dda97a51)
+        ;
+
+        
+    
+    
+            var marker_e515b261e96919aafaa181012188dd85 = L.marker(
+                [53.2434, 34.3645],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_fa243c3178aaa67e0f11513c7a1bc029 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87ac19cb0935006db5df8b7138560976 = $(`<div id="html_87ac19cb0935006db5df8b7138560976" style="width: 100.0%; height: 100.0%;">Брянск</div>`)[0];
+                popup_fa243c3178aaa67e0f11513c7a1bc029.setContent(html_87ac19cb0935006db5df8b7138560976);
+            
+        
+
+        marker_e515b261e96919aafaa181012188dd85.bindPopup(popup_fa243c3178aaa67e0f11513c7a1bc029)
+        ;
+
+        
+    
+    
+            var marker_bba5740443de645d1688388960683f67 = L.marker(
+                [51.7307, 36.1921],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_fb6025994ee8a673f9ea2af8def6f827 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51cbfc92876d5758bd915471e9a18647 = $(`<div id="html_51cbfc92876d5758bd915471e9a18647" style="width: 100.0%; height: 100.0%;">Курск</div>`)[0];
+                popup_fb6025994ee8a673f9ea2af8def6f827.setContent(html_51cbfc92876d5758bd915471e9a18647);
+            
+        
+
+        marker_bba5740443de645d1688388960683f67.bindPopup(popup_fb6025994ee8a673f9ea2af8def6f827)
+        ;
+
+        
+    
+    
+            var marker_24f851c03e0ac390041df785ac259e6b = L.marker(
+                [57.0003, 40.9749],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_65b56df13d0efe865b33271dfb0a87de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f00dc273ec440aea7c3549ae36da2c8 = $(`<div id="html_3f00dc273ec440aea7c3549ae36da2c8" style="width: 100.0%; height: 100.0%;">Иваново</div>`)[0];
+                popup_65b56df13d0efe865b33271dfb0a87de.setContent(html_3f00dc273ec440aea7c3549ae36da2c8);
+            
+        
+
+        marker_24f851c03e0ac390041df785ac259e6b.bindPopup(popup_65b56df13d0efe865b33271dfb0a87de)
+        ;
+
+        
+    
+    
+            var marker_d915827398f9043edea1fa8d01b3eb47 = L.marker(
+                [53.4059, 58.9866],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_2fe0dab50884e88486c9c55a81775f2e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9b53a28ab2f3f1841e1c4291db97a9b = $(`<div id="html_d9b53a28ab2f3f1841e1c4291db97a9b" style="width: 100.0%; height: 100.0%;">Магнитогорск</div>`)[0];
+                popup_2fe0dab50884e88486c9c55a81775f2e.setContent(html_d9b53a28ab2f3f1841e1c4291db97a9b);
+            
+        
+
+        marker_d915827398f9043edea1fa8d01b3eb47.bindPopup(popup_2fe0dab50884e88486c9c55a81775f2e)
+        ;
+
+        
+    
+    
+            var marker_35cdfa984862da693994b18ff7edaa85 = L.marker(
+                [56.8584, 35.9189],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_2ba3b911355e5bd2051c700a7b2038b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3240a7a9d794a02daa090338672cc49d = $(`<div id="html_3240a7a9d794a02daa090338672cc49d" style="width: 100.0%; height: 100.0%;">Тверь</div>`)[0];
+                popup_2ba3b911355e5bd2051c700a7b2038b1.setContent(html_3240a7a9d794a02daa090338672cc49d);
+            
+        
+
+        marker_35cdfa984862da693994b18ff7edaa85.bindPopup(popup_2ba3b911355e5bd2051c700a7b2038b1)
+        ;
+
+        
+    
+    
+            var marker_599286bbf7d64636a61512feac1bf73d = L.marker(
+                [45.0433, 41.968],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_0c53fb7a7c57dd2faa994d0400840feb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51e8b39b857d7efed0c7a6e5aeb8bdd4 = $(`<div id="html_51e8b39b857d7efed0c7a6e5aeb8bdd4" style="width: 100.0%; height: 100.0%;">Ставрополь</div>`)[0];
+                popup_0c53fb7a7c57dd2faa994d0400840feb.setContent(html_51e8b39b857d7efed0c7a6e5aeb8bdd4);
+            
+        
+
+        marker_599286bbf7d64636a61512feac1bf73d.bindPopup(popup_0c53fb7a7c57dd2faa994d0400840feb)
+        ;
+
+        
+    
+    
+            var marker_a4de4faf5276a4465ac371b619eaaf6d = L.marker(
+                [44.6166, 33.5254],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_28e2d5abf8077b73e8d38be53d5fe251 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf70bb6e36a3205149bc26bc2c36c4be = $(`<div id="html_bf70bb6e36a3205149bc26bc2c36c4be" style="width: 100.0%; height: 100.0%;">Севастополь</div>`)[0];
+                popup_28e2d5abf8077b73e8d38be53d5fe251.setContent(html_bf70bb6e36a3205149bc26bc2c36c4be);
+            
+        
+
+        marker_a4de4faf5276a4465ac371b619eaaf6d.bindPopup(popup_28e2d5abf8077b73e8d38be53d5fe251)
+        ;
+
+        
+    
+    
+            var marker_6fdf2d7de97ddf1b34de67775cb314bd = L.marker(
+                [57.9083, 59.9719],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_5774cd6685b6441d288a8c3a06351bb9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a40974e236300d10fa46398b16dc2ad1 = $(`<div id="html_a40974e236300d10fa46398b16dc2ad1" style="width: 100.0%; height: 100.0%;">Нижний Тагил</div>`)[0];
+                popup_5774cd6685b6441d288a8c3a06351bb9.setContent(html_a40974e236300d10fa46398b16dc2ad1);
+            
+        
+
+        marker_6fdf2d7de97ddf1b34de67775cb314bd.bindPopup(popup_5774cd6685b6441d288a8c3a06351bb9)
+        ;
+
+        
+    
+    
+            var marker_221af3f51120d09a583fa4cc79697b72 = L.marker(
+                [50.6107, 36.5802],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_118b8d1904da018016f590d2d8034aff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4695724ebed2726b022d8c2632874d24 = $(`<div id="html_4695724ebed2726b022d8c2632874d24" style="width: 100.0%; height: 100.0%;">Белгород</div>`)[0];
+                popup_118b8d1904da018016f590d2d8034aff.setContent(html_4695724ebed2726b022d8c2632874d24);
+            
+        
+
+        marker_221af3f51120d09a583fa4cc79697b72.bindPopup(popup_118b8d1904da018016f590d2d8034aff)
+        ;
+
+        
+    
+    
+            var marker_34d0249dd2781289a20b9557ccee3431 = L.marker(
+                [64.5399, 40.5159],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_bf21662126ce93f6fc6767e0089923c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1eaab85f2fccf49c2c3b25ad67dcabd3 = $(`<div id="html_1eaab85f2fccf49c2c3b25ad67dcabd3" style="width: 100.0%; height: 100.0%;">Архангельск</div>`)[0];
+                popup_bf21662126ce93f6fc6767e0089923c8.setContent(html_1eaab85f2fccf49c2c3b25ad67dcabd3);
+            
+        
+
+        marker_34d0249dd2781289a20b9557ccee3431.bindPopup(popup_bf21662126ce93f6fc6767e0089923c8)
+        ;
+
+        
+    
+    
+            var marker_a36ea8d05115cb844fbadc675ec41e52 = L.marker(
+                [56.1291, 40.4066],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_cbaa737f5a55d0edecf0d791a31711da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_350f6eeb60cb567f67a6ef280ab57af5 = $(`<div id="html_350f6eeb60cb567f67a6ef280ab57af5" style="width: 100.0%; height: 100.0%;">Владимир</div>`)[0];
+                popup_cbaa737f5a55d0edecf0d791a31711da.setContent(html_350f6eeb60cb567f67a6ef280ab57af5);
+            
+        
+
+        marker_a36ea8d05115cb844fbadc675ec41e52.bindPopup(popup_cbaa737f5a55d0edecf0d791a31711da)
+        ;
+
+        
+    
+    
+            var marker_550952a26fef45ef4c1ff01226d3b1ff = L.marker(
+                [43.5855, 39.7203],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_405bf79d301ab606ed2843b5f24cf0a0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_871ae21c96991fd4cbc94e87c0a63e71 = $(`<div id="html_871ae21c96991fd4cbc94e87c0a63e71" style="width: 100.0%; height: 100.0%;">Сочи</div>`)[0];
+                popup_405bf79d301ab606ed2843b5f24cf0a0.setContent(html_871ae21c96991fd4cbc94e87c0a63e71);
+            
+        
+
+        marker_550952a26fef45ef4c1ff01226d3b1ff.bindPopup(popup_405bf79d301ab606ed2843b5f24cf0a0)
+        ;
+
+        
+    
+    
+            var marker_fb40c30b9b97b46983de220b4cae488c = L.marker(
+                [55.4415, 65.3473],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_4900ddb0b440ed356e74f97501d85b0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3562ad8c35334d96e3c586e1bb7cda8 = $(`<div id="html_b3562ad8c35334d96e3c586e1bb7cda8" style="width: 100.0%; height: 100.0%;">Курган</div>`)[0];
+                popup_4900ddb0b440ed356e74f97501d85b0c.setContent(html_b3562ad8c35334d96e3c586e1bb7cda8);
+            
+        
+
+        marker_fb40c30b9b97b46983de220b4cae488c.bindPopup(popup_4900ddb0b440ed356e74f97501d85b0c)
+        ;
+
+        
+    
+    
+            var marker_3d075d163848221ba8f7c24096c1f606 = L.marker(
+                [44.9521, 34.1024],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_c99f20c0c959138589ddd359cc368a32 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_013c72db404634bd7f7da4ba28e05ced = $(`<div id="html_013c72db404634bd7f7da4ba28e05ced" style="width: 100.0%; height: 100.0%;">Симферополь</div>`)[0];
+                popup_c99f20c0c959138589ddd359cc368a32.setContent(html_013c72db404634bd7f7da4ba28e05ced);
+            
+        
+
+        marker_3d075d163848221ba8f7c24096c1f606.bindPopup(popup_c99f20c0c959138589ddd359cc368a32)
+        ;
+
+        
+    
+    
+            var marker_0f837f625805248c95b56be66217bfd7 = L.marker(
+                [54.7826, 32.045],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_48d77d00d971168a94b74d5be484f229 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca45e146d3d2220ddbea8fc9f7abab57 = $(`<div id="html_ca45e146d3d2220ddbea8fc9f7abab57" style="width: 100.0%; height: 100.0%;">Смоленск</div>`)[0];
+                popup_48d77d00d971168a94b74d5be484f229.setContent(html_ca45e146d3d2220ddbea8fc9f7abab57);
+            
+        
+
+        marker_0f837f625805248c95b56be66217bfd7.bindPopup(popup_48d77d00d971168a94b74d5be484f229)
+        ;
+
+        
+    
+    
+            var marker_f4aadb06ca0c9031593ede88bc8a62c7 = L.marker(
+                [54.5138, 36.2613],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_4e2523107bc8ca95827684098e28b222 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95dd42cb0530d52119866e060a5b6666 = $(`<div id="html_95dd42cb0530d52119866e060a5b6666" style="width: 100.0%; height: 100.0%;">Калуга</div>`)[0];
+                popup_4e2523107bc8ca95827684098e28b222.setContent(html_95dd42cb0530d52119866e060a5b6666);
+            
+        
+
+        marker_f4aadb06ca0c9031593ede88bc8a62c7.bindPopup(popup_4e2523107bc8ca95827684098e28b222)
+        ;
+
+        
+    
+    
+            var marker_ece823adf6684df7b6577fda69cfd070 = L.marker(
+                [52.0317, 113.5009],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_b95c3ff8d0c667f39d3510a6ed83915b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7606d796ad75638aa20876620d7922d = $(`<div id="html_a7606d796ad75638aa20876620d7922d" style="width: 100.0%; height: 100.0%;">Чита</div>`)[0];
+                popup_b95c3ff8d0c667f39d3510a6ed83915b.setContent(html_a7606d796ad75638aa20876620d7922d);
+            
+        
+
+        marker_ece823adf6684df7b6577fda69cfd070.bindPopup(popup_b95c3ff8d0c667f39d3510a6ed83915b)
+        ;
+
+        
+    
+    
+            var marker_22342ca1c86e948eabc07c5e3e8700b3 = L.marker(
+                [54.1837, 45.1753],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_edc9329ce563b3192d2561d71b0bbdb0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d69e60dd58e48c1e1d027b5041563bf = $(`<div id="html_3d69e60dd58e48c1e1d027b5041563bf" style="width: 100.0%; height: 100.0%;">Саранск</div>`)[0];
+                popup_edc9329ce563b3192d2561d71b0bbdb0.setContent(html_3d69e60dd58e48c1e1d027b5041563bf);
+            
+        
+
+        marker_22342ca1c86e948eabc07c5e3e8700b3.bindPopup(popup_edc9329ce563b3192d2561d71b0bbdb0)
+        ;
+
+        
+    
+    
+            var marker_a6f7688607609ee14e0b3f66f1aa43cf = L.marker(
+                [52.9669, 36.0684],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_a4e5c765e748b1f4e61e5834fbce9b12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10eebf7d5b3c3de50c8452b8831c45a6 = $(`<div id="html_10eebf7d5b3c3de50c8452b8831c45a6" style="width: 100.0%; height: 100.0%;">Орёл</div>`)[0];
+                popup_a4e5c765e748b1f4e61e5834fbce9b12.setContent(html_10eebf7d5b3c3de50c8452b8831c45a6);
+            
+        
+
+        marker_a6f7688607609ee14e0b3f66f1aa43cf.bindPopup(popup_a4e5c765e748b1f4e61e5834fbce9b12)
+        ;
+
+        
+    
+    
+            var marker_e82b756354a54c0a1211a13e83d67989 = L.marker(
+                [48.7862, 44.7448],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_6f41c288bbffd2f0de8bc241ae623332 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51dfa289b6542b57cb900d06422b4d29 = $(`<div id="html_51dfa289b6542b57cb900d06422b4d29" style="width: 100.0%; height: 100.0%;">Волжский</div>`)[0];
+                popup_6f41c288bbffd2f0de8bc241ae623332.setContent(html_51dfa289b6542b57cb900d06422b4d29);
+            
+        
+
+        marker_e82b756354a54c0a1211a13e83d67989.bindPopup(popup_6f41c288bbffd2f0de8bc241ae623332)
+        ;
+
+        
+    
+    
+            var marker_1e9bdda85729f34ef8a7fdb7675a8468 = L.marker(
+                [59.1294, 37.9085],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_a4c1c63d73b5cba7b9a519af3fe49cac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af5c30a2446f90a00ead7996fb11d132 = $(`<div id="html_af5c30a2446f90a00ead7996fb11d132" style="width: 100.0%; height: 100.0%;">Череповец</div>`)[0];
+                popup_a4c1c63d73b5cba7b9a519af3fe49cac.setContent(html_af5c30a2446f90a00ead7996fb11d132);
+            
+        
+
+        marker_1e9bdda85729f34ef8a7fdb7675a8468.bindPopup(popup_a4c1c63d73b5cba7b9a519af3fe49cac)
+        ;
+
+        
+    
+    
+            var marker_b2112832491efec42c66e71511468c59 = L.marker(
+                [43.0367, 44.6675],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_848023efc58e222c794e671418c4227a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_236541e117ffef75a0bf902e6b85e93f = $(`<div id="html_236541e117ffef75a0bf902e6b85e93f" style="width: 100.0%; height: 100.0%;">Владикавказ</div>`)[0];
+                popup_848023efc58e222c794e671418c4227a.setContent(html_236541e117ffef75a0bf902e6b85e93f);
+            
+        
+
+        marker_b2112832491efec42c66e71511468c59.bindPopup(popup_848023efc58e222c794e671418c4227a)
+        ;
+
+        
+    
+    
+            var marker_7da98731b2f6062c3e8b7264d4ce10bb = L.marker(
+                [68.9706, 33.076],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_d234a307390981ffcebf6f686c4771a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4df6b6579254d87f8330a8c78abbe24 = $(`<div id="html_f4df6b6579254d87f8330a8c78abbe24" style="width: 100.0%; height: 100.0%;">Мурманск</div>`)[0];
+                popup_d234a307390981ffcebf6f686c4771a1.setContent(html_f4df6b6579254d87f8330a8c78abbe24);
+            
+        
+
+        marker_7da98731b2f6062c3e8b7264d4ce10bb.bindPopup(popup_d234a307390981ffcebf6f686c4771a1)
+        ;
+
+        
+    
+    
+            var marker_04e798a180df4dd21fd5cd7100e97dcb = L.marker(
+                [61.2417, 73.3936],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_f73ed42867f7c4efd49526a297701eb2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8deed3056328f30d2149fe971c7d2b81 = $(`<div id="html_8deed3056328f30d2149fe971c7d2b81" style="width: 100.0%; height: 100.0%;">Сургут</div>`)[0];
+                popup_f73ed42867f7c4efd49526a297701eb2.setContent(html_8deed3056328f30d2149fe971c7d2b81);
+            
+        
+
+        marker_04e798a180df4dd21fd5cd7100e97dcb.bindPopup(popup_f73ed42867f7c4efd49526a297701eb2)
+        ;
+
+        
+    
+    
+            var marker_3b9f24399cd25fa9cf26cab0a9158584 = L.marker(
+                [59.2205, 39.8915],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_6118c23537840f287031e1ea2a7fc439 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61a0491352bd4e12fea13613151860af = $(`<div id="html_61a0491352bd4e12fea13613151860af" style="width: 100.0%; height: 100.0%;">Вологда</div>`)[0];
+                popup_6118c23537840f287031e1ea2a7fc439.setContent(html_61a0491352bd4e12fea13613151860af);
+            
+        
+
+        marker_3b9f24399cd25fa9cf26cab0a9158584.bindPopup(popup_6118c23537840f287031e1ea2a7fc439)
+        ;
+
+        
+    
+    
+            var marker_b9cd2a68a644cd0482fc6f7c209678c3 = L.marker(
+                [52.7212, 41.4528],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_30af0fa4aadf07d3dfe6f13647a93fad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_318bc228bdebc0fc69782b93376b183c = $(`<div id="html_318bc228bdebc0fc69782b93376b183c" style="width: 100.0%; height: 100.0%;">Тамбов</div>`)[0];
+                popup_30af0fa4aadf07d3dfe6f13647a93fad.setContent(html_318bc228bdebc0fc69782b93376b183c);
+            
+        
+
+        marker_b9cd2a68a644cd0482fc6f7c209678c3.bindPopup(popup_30af0fa4aadf07d3dfe6f13647a93fad)
+        ;
+
+        
+    
+    
+            var marker_7ca697b321de2b55bb69468a2deb9d91 = L.marker(
+                [53.6304, 55.9308],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_3aada1bbd3cc98ef0615f741180fe253 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_182d547d23b11b73b3dd180c9879fe26 = $(`<div id="html_182d547d23b11b73b3dd180c9879fe26" style="width: 100.0%; height: 100.0%;">Стерлитамак</div>`)[0];
+                popup_3aada1bbd3cc98ef0615f741180fe253.setContent(html_182d547d23b11b73b3dd180c9879fe26);
+            
+        
+
+        marker_7ca697b321de2b55bb69468a2deb9d91.bindPopup(popup_3aada1bbd3cc98ef0615f741180fe253)
+        ;
+
+        
+    
+    
+            var marker_532e349b24e631ad955eb06d8c270ccb = L.marker(
+                [43.312, 45.6888],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_6f89af95c3f48b4004b32f48245b54dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf9c0802e3c3418f505d973159035528 = $(`<div id="html_bf9c0802e3c3418f505d973159035528" style="width: 100.0%; height: 100.0%;">Грозный</div>`)[0];
+                popup_6f89af95c3f48b4004b32f48245b54dd.setContent(html_bf9c0802e3c3418f505d973159035528);
+            
+        
+
+        marker_532e349b24e631ad955eb06d8c270ccb.bindPopup(popup_6f89af95c3f48b4004b32f48245b54dd)
+        ;
+
+        
+    
+    
+            var marker_e81885194102f6d8edf8663a2229303c = L.marker(
+                [62.0272, 129.7321],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_18059ed52f0273a04cf1c6c949801ab6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c55f6c89b7a96a3e31ae6e5d67f524f1 = $(`<div id="html_c55f6c89b7a96a3e31ae6e5d67f524f1" style="width: 100.0%; height: 100.0%;">Якутск</div>`)[0];
+                popup_18059ed52f0273a04cf1c6c949801ab6.setContent(html_c55f6c89b7a96a3e31ae6e5d67f524f1);
+            
+        
+
+        marker_e81885194102f6d8edf8663a2229303c.bindPopup(popup_18059ed52f0273a04cf1c6c949801ab6)
+        ;
+
+        
+    
+    
+            var marker_115097923a003515efa8ad8d3a065474 = L.marker(
+                [57.7679, 40.9269],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_f3ffbf00829e5fb14faa7f524da71762 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c62b78ff4803cb096163575f6f9c5945 = $(`<div id="html_c62b78ff4803cb096163575f6f9c5945" style="width: 100.0%; height: 100.0%;">Кострома</div>`)[0];
+                popup_f3ffbf00829e5fb14faa7f524da71762.setContent(html_c62b78ff4803cb096163575f6f9c5945);
+            
+        
+
+        marker_115097923a003515efa8ad8d3a065474.bindPopup(popup_f3ffbf00829e5fb14faa7f524da71762)
+        ;
+
+        
+    
+    
+            var marker_49c21fabc085572120c300a24e03b23a = L.marker(
+                [50.55, 137.0],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_fa5db42814ec0d2095712db901f37bc1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_517d7cc79e517e5814bbd98bc1e53172 = $(`<div id="html_517d7cc79e517e5814bbd98bc1e53172" style="width: 100.0%; height: 100.0%;">Комсомольск-на-Амуре</div>`)[0];
+                popup_fa5db42814ec0d2095712db901f37bc1.setContent(html_517d7cc79e517e5814bbd98bc1e53172);
+            
+        
+
+        marker_49c21fabc085572120c300a24e03b23a.bindPopup(popup_fa5db42814ec0d2095712db901f37bc1)
+        ;
+
+        
+    
+    
+            var marker_963ef7e2844f59d715b9539ca54a1f3c = L.marker(
+                [61.785, 34.3467],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_b04963ff72ad8e888c16483c78218bc4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_630e27ba8f4c6c670d6c10a3d7bb9459 = $(`<div id="html_630e27ba8f4c6c670d6c10a3d7bb9459" style="width: 100.0%; height: 100.0%;">Петрозаводск</div>`)[0];
+                popup_b04963ff72ad8e888c16483c78218bc4.setContent(html_630e27ba8f4c6c670d6c10a3d7bb9459);
+            
+        
+
+        marker_963ef7e2844f59d715b9539ca54a1f3c.bindPopup(popup_b04963ff72ad8e888c16483c78218bc4)
+        ;
+
+        
+    
+    
+            var marker_44d4306db123d71c071626858501adb3 = L.marker(
+                [47.2208, 38.8952],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_2016a7a93d734a783ba8ef366fb3581d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4ddcd4687319ed4733670c9c9ac33b1 = $(`<div id="html_d4ddcd4687319ed4733670c9c9ac33b1" style="width: 100.0%; height: 100.0%;">Таганрог</div>`)[0];
+                popup_2016a7a93d734a783ba8ef366fb3581d.setContent(html_d4ddcd4687319ed4733670c9c9ac33b1);
+            
+        
+
+        marker_44d4306db123d71c071626858501adb3.bindPopup(popup_2016a7a93d734a783ba8ef366fb3581d)
+        ;
+
+        
+    
+    
+            var marker_363446d3a3b2a0da73bf44ec2a24e9d0 = L.marker(
+                [60.9333, 76.5528],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_5cfe47e31f0facd454b56e265aab1550 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b526570179611be1766ae83b788ffc78 = $(`<div id="html_b526570179611be1766ae83b788ffc78" style="width: 100.0%; height: 100.0%;">Нижневартовск</div>`)[0];
+                popup_5cfe47e31f0facd454b56e265aab1550.setContent(html_b526570179611be1766ae83b788ffc78);
+            
+        
+
+        marker_363446d3a3b2a0da73bf44ec2a24e9d0.bindPopup(popup_5cfe47e31f0facd454b56e265aab1550)
+        ;
+
+        
+    
+    
+            var marker_cf06c25466b3d90c299b8e3f35413db0 = L.marker(
+                [56.6388, 47.8847],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_92ef471c94b64f0557f57e18f8dde96a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0359924f37e95758e72b6e223cfa7631 = $(`<div id="html_0359924f37e95758e72b6e223cfa7631" style="width: 100.0%; height: 100.0%;">Йошкар-Ола</div>`)[0];
+                popup_92ef471c94b64f0557f57e18f8dde96a.setContent(html_0359924f37e95758e72b6e223cfa7631);
+            
+        
+
+        marker_cf06c25466b3d90c299b8e3f35413db0.bindPopup(popup_92ef471c94b64f0557f57e18f8dde96a)
+        ;
+
+        
+    
+    
+            var marker_04601f8f13a5909957dfe7de27961df7 = L.marker(
+                [56.151, 101.631],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_52b95dedc6ec84e99f03245347082a61 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08488a4bc5e96c2d694f36d49a491c03 = $(`<div id="html_08488a4bc5e96c2d694f36d49a491c03" style="width: 100.0%; height: 100.0%;">Братск</div>`)[0];
+                popup_52b95dedc6ec84e99f03245347082a61.setContent(html_08488a4bc5e96c2d694f36d49a491c03);
+            
+        
+
+        marker_04601f8f13a5909957dfe7de27961df7.bindPopup(popup_52b95dedc6ec84e99f03245347082a61)
+        ;
+
+        
+    
+    
+            var marker_e53e346d6acc9b80a8f665c486b94334 = L.marker(
+                [44.7234, 37.7689],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_7f4fdaeb9c168b1039a96f346b4d7f3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_357b64a46efbe6dccc32ef25fbc95805 = $(`<div id="html_357b64a46efbe6dccc32ef25fbc95805" style="width: 100.0%; height: 100.0%;">Новороссийск</div>`)[0];
+                popup_7f4fdaeb9c168b1039a96f346b4d7f3b.setContent(html_357b64a46efbe6dccc32ef25fbc95805);
+            
+        
+
+        marker_e53e346d6acc9b80a8f665c486b94334.bindPopup(popup_7f4fdaeb9c168b1039a96f346b4d7f3b)
+        ;
+
+        
+    
+    
+            var marker_147bf4e4fe807ff6d48ebdf696ce9df9 = L.marker(
+                [56.2389, 43.453],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_aa4589cf573941acdbfc244a105b1106 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df247791de0ea08cf700aefb2c280f8f = $(`<div id="html_df247791de0ea08cf700aefb2c280f8f" style="width: 100.0%; height: 100.0%;">Дзержинск</div>`)[0];
+                popup_aa4589cf573941acdbfc244a105b1106.setContent(html_df247791de0ea08cf700aefb2c280f8f);
+            
+        
+
+        marker_147bf4e4fe807ff6d48ebdf696ce9df9.bindPopup(popup_aa4589cf573941acdbfc244a105b1106)
+        ;
+
+        
+    
+    
+            var marker_87195c05ca28e128d699457e073ba569 = L.marker(
+                [47.708, 40.2155],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_c07003e0406b511da91949a030a952a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5b067b4b4186a9b97cf5caf66a7aa2a = $(`<div id="html_d5b067b4b4186a9b97cf5caf66a7aa2a" style="width: 100.0%; height: 100.0%;">Шахты</div>`)[0];
+                popup_c07003e0406b511da91949a030a952a9.setContent(html_d5b067b4b4186a9b97cf5caf66a7aa2a);
+            
+        
+
+        marker_87195c05ca28e128d699457e073ba569.bindPopup(popup_c07003e0406b511da91949a030a952a9)
+        ;
+
+        
+    
+    
+            var marker_930b12f54a3639e1a7b6162ff5350c7a = L.marker(
+                [43.4851, 43.6094],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_bc74c0c96fd928352c91370ef90fdc30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b97f1c9ed4b228298d3e3dfd888cba1 = $(`<div id="html_3b97f1c9ed4b228298d3e3dfd888cba1" style="width: 100.0%; height: 100.0%;">Нальчик</div>`)[0];
+                popup_bc74c0c96fd928352c91370ef90fdc30.setContent(html_3b97f1c9ed4b228298d3e3dfd888cba1);
+            
+        
+
+        marker_930b12f54a3639e1a7b6162ff5350c7a.bindPopup(popup_bc74c0c96fd928352c91370ef90fdc30)
+        ;
+
+        
+    
+    
+            var marker_15d0b26f61824637e27e032ca738abd8 = L.marker(
+                [51.2049, 58.6398],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_d4722cc7beabfe7e4dff435f5cb0f10c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e048929dd8e4df93736b13e2768bb1e = $(`<div id="html_5e048929dd8e4df93736b13e2768bb1e" style="width: 100.0%; height: 100.0%;">Орск</div>`)[0];
+                popup_d4722cc7beabfe7e4dff435f5cb0f10c.setContent(html_5e048929dd8e4df93736b13e2768bb1e);
+            
+        
+
+        marker_15d0b26f61824637e27e032ca738abd8.bindPopup(popup_d4722cc7beabfe7e4dff435f5cb0f10c)
+        ;
+
+        
+    
+    
+            var marker_2859958f5a93b223cd5fc6f064c7d9cd = L.marker(
+                [61.6748, 50.8364],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_77a6c305565a7a7802b37a91e0830187 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_01d6d2c746c2c7e17f8260efa99855db = $(`<div id="html_01d6d2c746c2c7e17f8260efa99855db" style="width: 100.0%; height: 100.0%;">Сыктывкар</div>`)[0];
+                popup_77a6c305565a7a7802b37a91e0830187.setContent(html_01d6d2c746c2c7e17f8260efa99855db);
+            
+        
+
+        marker_2859958f5a93b223cd5fc6f064c7d9cd.bindPopup(popup_77a6c305565a7a7802b37a91e0830187)
+        ;
+
+        
+    
+    
+            var marker_a13fc0fa4dee981f869c2c7db54ef0b2 = L.marker(
+                [55.6363, 51.8179],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_d79a9d459b3be253ebf2ed71b74a201f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d7b2d2177a80adf13f92ca7d73267cc = $(`<div id="html_9d7b2d2177a80adf13f92ca7d73267cc" style="width: 100.0%; height: 100.0%;">Нижнекамск</div>`)[0];
+                popup_d79a9d459b3be253ebf2ed71b74a201f.setContent(html_9d7b2d2177a80adf13f92ca7d73267cc);
+            
+        
+
+        marker_a13fc0fa4dee981f869c2c7db54ef0b2.bindPopup(popup_d79a9d459b3be253ebf2ed71b74a201f)
+        ;
+
+        
+    
+    
+            var marker_0ffeaa9f5921626bd701e48294f46f06 = L.marker(
+                [52.5393, 103.8892],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_2eba49e66e434c9ca1c58c7821e3147a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ae43e96075afc22d270152fb4dde2b5 = $(`<div id="html_7ae43e96075afc22d270152fb4dde2b5" style="width: 100.0%; height: 100.0%;">Ангарск</div>`)[0];
+                popup_2eba49e66e434c9ca1c58c7821e3147a.setContent(html_7ae43e96075afc22d270152fb4dde2b5);
+            
+        
+
+        marker_0ffeaa9f5921626bd701e48294f46f06.bindPopup(popup_2eba49e66e434c9ca1c58c7821e3147a)
+        ;
+
+        
+    
+    
+            var marker_fa7ce54aac484749360ca9abdc598b58 = L.marker(
+                [51.3069, 37.8074],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_7c3ae556905a712297378a4ad37877ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4cf6c653d65475756e82f77780fbcb8 = $(`<div id="html_c4cf6c653d65475756e82f77780fbcb8" style="width: 100.0%; height: 100.0%;">Старый Оскол</div>`)[0];
+                popup_7c3ae556905a712297378a4ad37877ef.setContent(html_c4cf6c653d65475756e82f77780fbcb8);
+            
+        
+
+        marker_fa7ce54aac484749360ca9abdc598b58.bindPopup(popup_7c3ae556905a712297378a4ad37877ef)
+        ;
+
+        
+    
+    
+            var marker_6893eb0e0579a4682ebf00a593b990d7 = L.marker(
+                [58.5228, 31.2698],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_0984482060774b6f03dc47b67abf8f75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a7dc0e6874ab19cf1681e45f7f1aa01 = $(`<div id="html_1a7dc0e6874ab19cf1681e45f7f1aa01" style="width: 100.0%; height: 100.0%;">Великий Новгород</div>`)[0];
+                popup_0984482060774b6f03dc47b67abf8f75.setContent(html_1a7dc0e6874ab19cf1681e45f7f1aa01);
+            
+        
+
+        marker_6893eb0e0579a4682ebf00a593b990d7.bindPopup(popup_0984482060774b6f03dc47b67abf8f75)
+        ;
+
+        
+    
+    
+            var marker_0c958c8b26ef533a48a881703e823bc6 = L.marker(
+                [55.8091, 37.9002],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_6dd9c26d99434ee96aa0c51debc90cab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b9f4525193134fb6df4b34ad76f67cd = $(`<div id="html_3b9f4525193134fb6df4b34ad76f67cd" style="width: 100.0%; height: 100.0%;">Балашиха</div>`)[0];
+                popup_6dd9c26d99434ee96aa0c51debc90cab.setContent(html_3b9f4525193134fb6df4b34ad76f67cd);
+            
+        
+
+        marker_0c958c8b26ef533a48a881703e823bc6.bindPopup(popup_6dd9c26d99434ee96aa0c51debc90cab)
+        ;
+
+        
+    
+    
+            var marker_80f056569c417acc07cd0d6f37c20db2 = L.marker(
+                [50.2796, 127.5403],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_5020e04497e760d07cff81ef5cb8b306 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc8bbe324e0c43742ed3ea36f1acfcbb = $(`<div id="html_fc8bbe324e0c43742ed3ea36f1acfcbb" style="width: 100.0%; height: 100.0%;">Благовещенск</div>`)[0];
+                popup_5020e04497e760d07cff81ef5cb8b306.setContent(html_fc8bbe324e0c43742ed3ea36f1acfcbb);
+            
+        
+
+        marker_80f056569c417acc07cd0d6f37c20db2.bindPopup(popup_5020e04497e760d07cff81ef5cb8b306)
+        ;
+
+        
+    
+    
+            var marker_25894f522cbf89b7b857e3dab2b9eb1a = L.marker(
+                [53.8771, 86.7583],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_533978d16c3dcfb98ff998eab9f7e0db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cceeefaf688084b0cf64c5929968ef7 = $(`<div id="html_9cceeefaf688084b0cf64c5929968ef7" style="width: 100.0%; height: 100.0%;">Прокопьевск</div>`)[0];
+                popup_533978d16c3dcfb98ff998eab9f7e0db.setContent(html_9cceeefaf688084b0cf64c5929968ef7);
+            
+        
+
+        marker_25894f522cbf89b7b857e3dab2b9eb1a.bindPopup(popup_533978d16c3dcfb98ff998eab9f7e0db)
+        ;
+
+        
+    
+    
+            var marker_193a60f1e8de94a056358b901271a839 = L.marker(
+                [55.8949, 37.4593],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_f22219ba3538674b96eba1e2d4b58bf9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5d10879ba8626ce48bca1a4cde840fc = $(`<div id="html_d5d10879ba8626ce48bca1a4cde840fc" style="width: 100.0%; height: 100.0%;">Химки</div>`)[0];
+                popup_f22219ba3538674b96eba1e2d4b58bf9.setContent(html_d5d10879ba8626ce48bca1a4cde840fc);
+            
+        
+
+        marker_193a60f1e8de94a056358b901271a839.bindPopup(popup_f22219ba3538674b96eba1e2d4b58bf9)
+        ;
+
+        
+    
+    
+            var marker_c53f855738efa19b8137520cca42d568 = L.marker(
+                [57.8136, 28.3496],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_626acb6cea02a4f14d2ff16cd615a6a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49871f900c9025423d81b68360d95a42 = $(`<div id="html_49871f900c9025423d81b68360d95a42" style="width: 100.0%; height: 100.0%;">Псков</div>`)[0];
+                popup_626acb6cea02a4f14d2ff16cd615a6a4.setContent(html_49871f900c9025423d81b68360d95a42);
+            
+        
+
+        marker_c53f855738efa19b8137520cca42d568.bindPopup(popup_626acb6cea02a4f14d2ff16cd615a6a4)
+        ;
+
+        
+    
+    
+            var marker_4763a8d98b669fa2f9b06ab7a4e969a5 = L.marker(
+                [52.5393, 85.2072],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_d039828ac772f005b6a13037a920cfcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5340e3e8e361e6c575ccd397d42dca48 = $(`<div id="html_5340e3e8e361e6c575ccd397d42dca48" style="width: 100.0%; height: 100.0%;">Бийск</div>`)[0];
+                popup_d039828ac772f005b6a13037a920cfcf.setContent(html_5340e3e8e361e6c575ccd397d42dca48);
+            
+        
+
+        marker_4763a8d98b669fa2f9b06ab7a4e969a5.bindPopup(popup_d039828ac772f005b6a13037a920cfcf)
+        ;
+
+        
+    
+    
+            var marker_0a3cf78c9ef89249485bba4e41846306 = L.marker(
+                [51.4982, 46.1228],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_444aa02adb7ab4396c63ad5a1626f355 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05298637f99d468569df5d1fd2eaaaa1 = $(`<div id="html_05298637f99d468569df5d1fd2eaaaa1" style="width: 100.0%; height: 100.0%;">Энгельс</div>`)[0];
+                popup_444aa02adb7ab4396c63ad5a1626f355.setContent(html_05298637f99d468569df5d1fd2eaaaa1);
+            
+        
+
+        marker_0a3cf78c9ef89249485bba4e41846306.bindPopup(popup_444aa02adb7ab4396c63ad5a1626f355)
+        ;
+
+        
+    
+    
+            var marker_5ec990d6f22ebfb6c4e3bc6aa20b18b1 = L.marker(
+                [58.0582, 38.8033],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_68666111e9e1cd3ae38a99f366a8437f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_046ed0fe2014d7344711f1f911b3a1f1 = $(`<div id="html_046ed0fe2014d7344711f1f911b3a1f1" style="width: 100.0%; height: 100.0%;">Рыбинск</div>`)[0];
+                popup_68666111e9e1cd3ae38a99f366a8437f.setContent(html_046ed0fe2014d7344711f1f911b3a1f1);
+            
+        
+
+        marker_5ec990d6f22ebfb6c4e3bc6aa20b18b1.bindPopup(popup_68666111e9e1cd3ae38a99f366a8437f)
+        ;
+
+        
+    
+    
+            var marker_b737dfb0c7c13c31f70ff33179b917c8 = L.marker(
+                [52.0339, 47.7873],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_1af383c7abe48d86cfeb964bd3ff37ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9afb302b66d71527aa05faf0c8f4246 = $(`<div id="html_b9afb302b66d71527aa05faf0c8f4246" style="width: 100.0%; height: 100.0%;">Балаково</div>`)[0];
+                popup_1af383c7abe48d86cfeb964bd3ff37ae.setContent(html_b9afb302b66d71527aa05faf0c8f4246);
+            
+        
+
+        marker_b737dfb0c7c13c31f70ff33179b917c8.bindPopup(popup_1af383c7abe48d86cfeb964bd3ff37ae)
+        ;
+
+        
+    
+    
+            var marker_bcf33bdfc8ae6dce2a88eb9b063935b4 = L.marker(
+                [64.5476, 39.8652],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_3c7bedc6220b0a44aa8a0dacd7760fc8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_200a1afc98237b0d417a997a076b57ed = $(`<div id="html_200a1afc98237b0d417a997a076b57ed" style="width: 100.0%; height: 100.0%;">Северодвинск</div>`)[0];
+                popup_3c7bedc6220b0a44aa8a0dacd7760fc8.setContent(html_200a1afc98237b0d417a997a076b57ed);
+            
+        
+
+        marker_bcf33bdfc8ae6dce2a88eb9b063935b4.bindPopup(popup_3c7bedc6220b0a44aa8a0dacd7760fc8)
+        ;
+
+        
+    
+    
+            var marker_ebbdc225cf342d72fcd24e21a9c75fd8 = L.marker(
+                [44.9875, 41.1192],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_181e6d05a063d1baf16eb7a5773e3ef6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e692e3638a61834ca3e48271fea2aa55 = $(`<div id="html_e692e3638a61834ca3e48271fea2aa55" style="width: 100.0%; height: 100.0%;">Армавир</div>`)[0];
+                popup_181e6d05a063d1baf16eb7a5773e3ef6.setContent(html_e692e3638a61834ca3e48271fea2aa55);
+            
+        
+
+        marker_ebbdc225cf342d72fcd24e21a9c75fd8.bindPopup(popup_181e6d05a063d1baf16eb7a5773e3ef6)
+        ;
+
+        
+    
+    
+            var marker_58d8bb0266eed6d61c19ed9022f29e70 = L.marker(
+                [55.4145, 37.5679],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_4f5d6fd2103cdb40cc6333a247cb9554 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16c463392d4a526a6b7288c73f2950c8 = $(`<div id="html_16c463392d4a526a6b7288c73f2950c8" style="width: 100.0%; height: 100.0%;">Подольск</div>`)[0];
+                popup_4f5d6fd2103cdb40cc6333a247cb9554.setContent(html_16c463392d4a526a6b7288c73f2950c8);
+            
+        
+
+        marker_58d8bb0266eed6d61c19ed9022f29e70.bindPopup(popup_4f5d6fd2103cdb40cc6333a247cb9554)
+        ;
+
+        
+    
+    
+            var marker_4ec7cea4d6025915b9a5cc02c5fddfc4 = L.marker(
+                [55.9178, 37.8143],
+                {
+}
+            ).addTo(map_39d6effc239707af30c0e73848abfb1a);
+        
+    
+        var popup_ad9184768d12380a0e1c231c2642ab7d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3af536026eb45764e01df074d0c0d3a8 = $(`<div id="html_3af536026eb45764e01df074d0c0d3a8" style="width: 100.0%; height: 100.0%;">Королёв</div>`)[0];
+                popup_ad9184768d12380a0e1c231c2642ab7d.setContent(html_3af536026eb45764e01df074d0c0d3a8);
+            
+        
+
+        marker_4ec7cea4d6025915b9a5cc02c5fddfc4.bindPopup(popup_ad9184768d12380a0e1c231c2642ab7d)
+        ;
+
+        
+    
+</script>
+</html>
