@@ -30,6 +30,27 @@
             font-weight: bold;
             color: #e74c3c;
         }
+        /* Запретить разрыв внутри строк таблицы */
+        tr {
+        page-break-inside: avoid;
+        }
+
+        /* Разрешить разрыв между строками */
+        tbody {
+        page-break-inside: auto;
+        }
+
+        /* Для длинных блоков текста */
+        .long-text {
+        page-break-inside: auto;
+        }
+
+        /* Нижний колонтитул (номер страницы) */
+        @page {
+        @bottom-center {
+            content: "Страница " counter(page) " из " counter(pages);
+        }
+        }
     
     </style>
 </head>
