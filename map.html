@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_79c91f6219c2763a4fe0a7b5b94ca4af {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_79c91f6219c2763a4fe0a7b5b94ca4af" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_79c91f6219c2763a4fe0a7b5b94ca4af = L.map(
+                "map_79c91f6219c2763a4fe0a7b5b94ca4af",
+                {
+                    center: [60.0, 100.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f824b10a43db2f598c996221281bb39b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f824b10a43db2f598c996221281bb39b.addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+            var marker_810a4fc9ccd07f62c622cce9fd3f7204 = L.marker(
+                [55.628354, 37.306609],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_97f2291ade517e52aab0f3bb8fb02057 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5092c517a0ec485cddbda52bcb5dfdbe = $(`<div id="html_5092c517a0ec485cddbda52bcb5dfdbe" style="width: 100.0%; height: 100.0%;">Бизнес центр - ОВиК_ИТП</div>`)[0];
+                popup_97f2291ade517e52aab0f3bb8fb02057.setContent(html_5092c517a0ec485cddbda52bcb5dfdbe);
+            
+        
+
+        marker_810a4fc9ccd07f62c622cce9fd3f7204.bindPopup(popup_97f2291ade517e52aab0f3bb8fb02057)
+        ;
+
+        
+    
+    
+            var marker_463b6fd3aa8f45250e85f041a2958260 = L.marker(
+                [54.576839, 36.349358],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_1279797b7259caa41c32001f48d92498 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35ca236b48bd5a0ae8b2322706b19c0e = $(`<div id="html_35ca236b48bd5a0ae8b2322706b19c0e" style="width: 100.0%; height: 100.0%;">Дата центр - ОВиК</div>`)[0];
+                popup_1279797b7259caa41c32001f48d92498.setContent(html_35ca236b48bd5a0ae8b2322706b19c0e);
+            
+        
+
+        marker_463b6fd3aa8f45250e85f041a2958260.bindPopup(popup_1279797b7259caa41c32001f48d92498)
+        ;
+
+        
+    
+    
+            var marker_f3cfd7c1c6c97d816d90f288e74ab763 = L.marker(
+                [56.957769, 65.763537],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_cf34ec2047719511be0bdaae4c8c85a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62fb5b4646f3372d9b89fcd640e8496c = $(`<div id="html_62fb5b4646f3372d9b89fcd640e8496c" style="width: 100.0%; height: 100.0%;">Школа - ИТП_ТМ</div>`)[0];
+                popup_cf34ec2047719511be0bdaae4c8c85a6.setContent(html_62fb5b4646f3372d9b89fcd640e8496c);
+            
+        
+
+        marker_f3cfd7c1c6c97d816d90f288e74ab763.bindPopup(popup_cf34ec2047719511be0bdaae4c8c85a6)
+        ;
+
+        
+    
+    
+            var marker_22ef2533523f095ee3d75d7134f3f6d6 = L.marker(
+                [57.159485, 65.539335],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_379091378bc28cc07a1a7b5475fd6e99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cde59132cdbcbdc653986faa2b51d35e = $(`<div id="html_cde59132cdbcbdc653986faa2b51d35e" style="width: 100.0%; height: 100.0%;">ЖК - ИТП_ТМ</div>`)[0];
+                popup_379091378bc28cc07a1a7b5475fd6e99.setContent(html_cde59132cdbcbdc653986faa2b51d35e);
+            
+        
+
+        marker_22ef2533523f095ee3d75d7134f3f6d6.bindPopup(popup_379091378bc28cc07a1a7b5475fd6e99)
+        ;
+
+        
+    
+    
+            var marker_e92b17de7abf8d8c6860f466deff0ee4 = L.marker(
+                [60.982895, 76.604843],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_56f1bb2db46b0d075534fc4db46889d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1c611f969209bd52ccd27405ee9383f = $(`<div id="html_a1c611f969209bd52ccd27405ee9383f" style="width: 100.0%; height: 100.0%;">Производственное - ИТП_ТМ</div>`)[0];
+                popup_56f1bb2db46b0d075534fc4db46889d1.setContent(html_a1c611f969209bd52ccd27405ee9383f);
+            
+        
+
+        marker_e92b17de7abf8d8c6860f466deff0ee4.bindPopup(popup_56f1bb2db46b0d075534fc4db46889d1)
+        ;
+
+        
+    
+    
+            var marker_6b5906eda5c231d9b1db02c41cd3319c = L.marker(
+                [61.279698, 73.519559],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_e02c2f2dd05ff0bfaedafae3f3fbbbfa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e2207682b1df5e1af85526b4b1d2fd5 = $(`<div id="html_6e2207682b1df5e1af85526b4b1d2fd5" style="width: 100.0%; height: 100.0%;">ГРЭС Сургут- ТМ</div>`)[0];
+                popup_e02c2f2dd05ff0bfaedafae3f3fbbbfa.setContent(html_6e2207682b1df5e1af85526b4b1d2fd5);
+            
+        
+
+        marker_6b5906eda5c231d9b1db02c41cd3319c.bindPopup(popup_e02c2f2dd05ff0bfaedafae3f3fbbbfa)
+        ;
+
+        
+    
+    
+            var marker_dfb691b9c78b0c7172b7f06cfa1713c6 = L.marker(
+                [56.14754, 94.489294],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_3523c71a12ed2462b50197cef7b9ae6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f867d3097c1b8cafd7d723420bd54eb2 = $(`<div id="html_f867d3097c1b8cafd7d723420bd54eb2" style="width: 100.0%; height: 100.0%;">ГРЭС Красноярск- ТМ</div>`)[0];
+                popup_3523c71a12ed2462b50197cef7b9ae6d.setContent(html_f867d3097c1b8cafd7d723420bd54eb2);
+            
+        
+
+        marker_dfb691b9c78b0c7172b7f06cfa1713c6.bindPopup(popup_3523c71a12ed2462b50197cef7b9ae6d)
+        ;
+
+        
+    
+    
+            var marker_e487f3db1ac1ef5744830245cd44b6d2 = L.marker(
+                [59.828203, 30.450369],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_d2806a6731fe5fdb3146439fe4a02457 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7bf6bceb2ac43ef2ae7900e224a35b0 = $(`<div id="html_d7bf6bceb2ac43ef2ae7900e224a35b0" style="width: 100.0%; height: 100.0%;">ТЭЦ СПБ - ТМ</div>`)[0];
+                popup_d2806a6731fe5fdb3146439fe4a02457.setContent(html_d7bf6bceb2ac43ef2ae7900e224a35b0);
+            
+        
+
+        marker_e487f3db1ac1ef5744830245cd44b6d2.bindPopup(popup_d2806a6731fe5fdb3146439fe4a02457)
+        ;
+
+        
+    
+    
+            var marker_656128bc140d053f992102e6997cd7ce = L.marker(
+                [55.769051, 37.727237],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_aa4b3b1e112b33221246d21ae018d792 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_191c87e78cc7584922da6fc7339d4883 = $(`<div id="html_191c87e78cc7584922da6fc7339d4883" style="width: 100.0%; height: 100.0%;">Котельная завода - ТМ</div>`)[0];
+                popup_aa4b3b1e112b33221246d21ae018d792.setContent(html_191c87e78cc7584922da6fc7339d4883);
+            
+        
+
+        marker_656128bc140d053f992102e6997cd7ce.bindPopup(popup_aa4b3b1e112b33221246d21ae018d792)
+        ;
+
+        
+    
+    
+            var marker_6ce95b0e7faaf43d2600e63a923e7ab5 = L.marker(
+                [55.708381, 37.721384],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_a78ba14e9c80e6bc7b5f0e9247efbf71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_246f5655a3875a7ac0cac773b97ec117 = $(`<div id="html_246f5655a3875a7ac0cac773b97ec117" style="width: 100.0%; height: 100.0%;">ИТП Технополис - ТМ</div>`)[0];
+                popup_a78ba14e9c80e6bc7b5f0e9247efbf71.setContent(html_246f5655a3875a7ac0cac773b97ec117);
+            
+        
+
+        marker_6ce95b0e7faaf43d2600e63a923e7ab5.bindPopup(popup_a78ba14e9c80e6bc7b5f0e9247efbf71)
+        ;
+
+        
+    
+    
+            var marker_17859b09537b3cd2f4501d0430de5adb = L.marker(
+                [55.905348, 38.003803],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_daf3b8d84d5b9b1e4850b1638d4cd82e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b902fb8789969275655fd47957ed8640 = $(`<div id="html_b902fb8789969275655fd47957ed8640" style="width: 100.0%; height: 100.0%;">Котельная складского компл. - ТМ</div>`)[0];
+                popup_daf3b8d84d5b9b1e4850b1638d4cd82e.setContent(html_b902fb8789969275655fd47957ed8640);
+            
+        
+
+        marker_17859b09537b3cd2f4501d0430de5adb.bindPopup(popup_daf3b8d84d5b9b1e4850b1638d4cd82e)
+        ;
+
+        
+    
+    
+            var marker_e4232b37b6410f0ac8d184ed04f392d1 = L.marker(
+                [55.857762, 37.32566],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_a2c9128e54992a434046f20a3c589c78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6001c10678e5786b285c009089cb61d8 = $(`<div id="html_6001c10678e5786b285c009089cb61d8" style="width: 100.0%; height: 100.0%;">Котельные жилого компл. - ТМ</div>`)[0];
+                popup_a2c9128e54992a434046f20a3c589c78.setContent(html_6001c10678e5786b285c009089cb61d8);
+            
+        
+
+        marker_e4232b37b6410f0ac8d184ed04f392d1.bindPopup(popup_a2c9128e54992a434046f20a3c589c78)
+        ;
+
+        
+    
+    
+            var marker_8c2558e510abbd1a84d47a473866535d = L.marker(
+                [56.437908, 38.251471],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_df1feb9641e6371864142bed545d3403 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c4b0635b5025bffd9284acc8a4cd091 = $(`<div id="html_5c4b0635b5025bffd9284acc8a4cd091" style="width: 100.0%; height: 100.0%;">Котельная производст. - ТМ</div>`)[0];
+                popup_df1feb9641e6371864142bed545d3403.setContent(html_5c4b0635b5025bffd9284acc8a4cd091);
+            
+        
+
+        marker_8c2558e510abbd1a84d47a473866535d.bindPopup(popup_df1feb9641e6371864142bed545d3403)
+        ;
+
+        
+    
+    
+            var marker_9122facc45a36165b230c85789c4c128 = L.marker(
+                [55.627235, 37.609316],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_9da9bfd94685067c0c72ccc9c594bfcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_874eb4bdf8d962bf2cc175cc5c552957 = $(`<div id="html_874eb4bdf8d962bf2cc175cc5c552957" style="width: 100.0%; height: 100.0%;">ИТП МОЭК Кировоградская8 - ТМ</div>`)[0];
+                popup_9da9bfd94685067c0c72ccc9c594bfcf.setContent(html_874eb4bdf8d962bf2cc175cc5c552957);
+            
+        
+
+        marker_9122facc45a36165b230c85789c4c128.bindPopup(popup_9da9bfd94685067c0c72ccc9c594bfcf)
+        ;
+
+        
+    
+    
+            var marker_13abb2f6494577678038d1b3519dd346 = L.marker(
+                [55.615265, 37.603956],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_9e20f9a92babd27e5278546d14742e05 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b508aa7646d8791d2737009acfc78853 = $(`<div id="html_b508aa7646d8791d2737009acfc78853" style="width: 100.0%; height: 100.0%;">ИТП МОЭК Кировоградская22 - ТМ</div>`)[0];
+                popup_9e20f9a92babd27e5278546d14742e05.setContent(html_b508aa7646d8791d2737009acfc78853);
+            
+        
+
+        marker_13abb2f6494577678038d1b3519dd346.bindPopup(popup_9e20f9a92babd27e5278546d14742e05)
+        ;
+
+        
+    
+    
+            var marker_b8697bbc834f1892144a4f8184a4525e = L.marker(
+                [55.826215, 37.524815],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_50a253001fdcfeeaed344f82f063120b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb88f6c6d7e3b9d46310ee896dfcfb39 = $(`<div id="html_fb88f6c6d7e3b9d46310ee896dfcfb39" style="width: 100.0%; height: 100.0%;">ИТП МОЭК Матроса-Железняка - ТМ</div>`)[0];
+                popup_50a253001fdcfeeaed344f82f063120b.setContent(html_fb88f6c6d7e3b9d46310ee896dfcfb39);
+            
+        
+
+        marker_b8697bbc834f1892144a4f8184a4525e.bindPopup(popup_50a253001fdcfeeaed344f82f063120b)
+        ;
+
+        
+    
+    
+            var marker_329095678bfb0df8e8e3acdb4188de65 = L.marker(
+                [55.750958, 37.687595],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_f5051ad6d2cb2bacbfbbad7146bd7073 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_854a153266ae56252cb7547a7e734078 = $(`<div id="html_854a153266ae56252cb7547a7e734078" style="width: 100.0%; height: 100.0%;">Котельная ЖК Символ - ТМ</div>`)[0];
+                popup_f5051ad6d2cb2bacbfbbad7146bd7073.setContent(html_854a153266ae56252cb7547a7e734078);
+            
+        
+
+        marker_329095678bfb0df8e8e3acdb4188de65.bindPopup(popup_f5051ad6d2cb2bacbfbbad7146bd7073)
+        ;
+
+        
+    
+    
+            var marker_179c0d8273530a1eaee5b453fac8ebf3 = L.marker(
+                [55.696855, 37.4767],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_31b8f7d4d340c632405e7e3c55616e48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1035ab5452c5e593ea1fd66e6c95a0a = $(`<div id="html_b1035ab5452c5e593ea1fd66e6c95a0a" style="width: 100.0%; height: 100.0%;">Котельная ЖК Огни2 - ТМ</div>`)[0];
+                popup_31b8f7d4d340c632405e7e3c55616e48.setContent(html_b1035ab5452c5e593ea1fd66e6c95a0a);
+            
+        
+
+        marker_179c0d8273530a1eaee5b453fac8ebf3.bindPopup(popup_31b8f7d4d340c632405e7e3c55616e48)
+        ;
+
+        
+    
+    
+            var marker_eb65dd76a5b4e9a33009eaaad96d4b20 = L.marker(
+                [55.793191, 37.329932],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_dcf9e6a1ff5d5da3094f476c819b76f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71ffe500c615af08c4df91450f1f4520 = $(`<div id="html_71ffe500c615af08c4df91450f1f4520" style="width: 100.0%; height: 100.0%;">ИТП БЦ Сберсити - ТМ</div>`)[0];
+                popup_dcf9e6a1ff5d5da3094f476c819b76f6.setContent(html_71ffe500c615af08c4df91450f1f4520);
+            
+        
+
+        marker_eb65dd76a5b4e9a33009eaaad96d4b20.bindPopup(popup_dcf9e6a1ff5d5da3094f476c819b76f6)
+        ;
+
+        
+    
+    
+            var marker_df292926af2c824cd48e8114af7ed170 = L.marker(
+                [55.63033, 37.652288],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_a85fc6774392b3fbb6e433718d091576 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f90c70d361dea04116ac66bcd2b0351 = $(`<div id="html_0f90c70d361dea04116ac66bcd2b0351" style="width: 100.0%; height: 100.0%;">ЦТП МОЭК - Бехтерева 21к2стр2</div>`)[0];
+                popup_a85fc6774392b3fbb6e433718d091576.setContent(html_0f90c70d361dea04116ac66bcd2b0351);
+            
+        
+
+        marker_df292926af2c824cd48e8114af7ed170.bindPopup(popup_a85fc6774392b3fbb6e433718d091576)
+        ;
+
+        
+    
+    
+            var marker_7e76c0970ad409bcd146e6bad076002d = L.marker(
+                [55.615685, 37.598645],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_22b2311f922d3552172c3f7edd4c29b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7c372eb3bd6bb0757def2a9f644a625 = $(`<div id="html_b7c372eb3bd6bb0757def2a9f644a625" style="width: 100.0%; height: 100.0%;">ЦТП МОЭК - Чертановская 27к1стр4</div>`)[0];
+                popup_22b2311f922d3552172c3f7edd4c29b4.setContent(html_b7c372eb3bd6bb0757def2a9f644a625);
+            
+        
+
+        marker_7e76c0970ad409bcd146e6bad076002d.bindPopup(popup_22b2311f922d3552172c3f7edd4c29b4)
+        ;
+
+        
+    
+    
+            var marker_06ca355676054055964d96a36ab24eeb = L.marker(
+                [55.425798, 36.866079],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_dd9e14adf888dfb7aed063013f880ec6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f910d042bb75021889db085292a73a3a = $(`<div id="html_f910d042bb75021889db085292a73a3a" style="width: 100.0%; height: 100.0%;">ЦТП МОЭК - пос.Киевский д3стр1</div>`)[0];
+                popup_dd9e14adf888dfb7aed063013f880ec6.setContent(html_f910d042bb75021889db085292a73a3a);
+            
+        
+
+        marker_06ca355676054055964d96a36ab24eeb.bindPopup(popup_dd9e14adf888dfb7aed063013f880ec6)
+        ;
+
+        
+    
+    
+            var marker_e37c0557b2f3e152cabcaa6a217222b9 = L.marker(
+                [55.518075, 37.226312],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_6e00720d7d7ee869c3ea42f8d8887e34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a5bbf35a66e9c1196b7094f7cb9bf59 = $(`<div id="html_8a5bbf35a66e9c1196b7094f7cb9bf59" style="width: 100.0%; height: 100.0%;">ЦТП МОЭК - пос.Птичное д71стр1</div>`)[0];
+                popup_6e00720d7d7ee869c3ea42f8d8887e34.setContent(html_8a5bbf35a66e9c1196b7094f7cb9bf59);
+            
+        
+
+        marker_e37c0557b2f3e152cabcaa6a217222b9.bindPopup(popup_6e00720d7d7ee869c3ea42f8d8887e34)
+        ;
+
+        
+    
+    
+            var marker_6af2b19fe0a65fd15a01b0091ae35c50 = L.marker(
+                [55.790804, 37.508316],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_a0f437ce7435951f65159ec09058e173 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9aefa35f976dd5bb7dca26ec6ecf18db = $(`<div id="html_9aefa35f976dd5bb7dca26ec6ecf18db" style="width: 100.0%; height: 100.0%;">ЖК_Indy - ОВиК_ТМ - тех.зак.</div>`)[0];
+                popup_a0f437ce7435951f65159ec09058e173.setContent(html_9aefa35f976dd5bb7dca26ec6ecf18db);
+            
+        
+
+        marker_6af2b19fe0a65fd15a01b0091ae35c50.bindPopup(popup_a0f437ce7435951f65159ec09058e173)
+        ;
+
+        
+    
+    
+            var marker_81f2cc1ecba46614a292beca0d8f237c = L.marker(
+                [55.729937, 37.742107],
+                {
+}
+            ).addTo(map_79c91f6219c2763a4fe0a7b5b94ca4af);
+        
+    
+        var popup_7ea9a7c2470625360e55bb24807e3f19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_180db4eff4929f9eef3fccf1783a2b19 = $(`<div id="html_180db4eff4929f9eef3fccf1783a2b19" style="width: 100.0%; height: 100.0%;">ЖК_Beside2 - ОВиК_ТМ - тех.зак.</div>`)[0];
+                popup_7ea9a7c2470625360e55bb24807e3f19.setContent(html_180db4eff4929f9eef3fccf1783a2b19);
+            
+        
+
+        marker_81f2cc1ecba46614a292beca0d8f237c.bindPopup(popup_7ea9a7c2470625360e55bb24807e3f19)
+        ;
+
+        
+    
+</script>
+</html>
