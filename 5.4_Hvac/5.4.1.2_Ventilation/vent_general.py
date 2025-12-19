@@ -47,8 +47,6 @@ def calculate_airVelocity_m_s(
             if square_m2 == 0:
                 square_m2 = round(3.1415 * ((diameter_m**2) / 4), 3)
 
-        print(f"square_m2 = {square_m2}")
-
         # Air velocity calculation
         velosity_m_s = round(flow_m3_h / (3600 * square_m2), 3)
         
@@ -162,7 +160,6 @@ def calculate_air_pressure_loss_Pa(
             diameter_m = diameter_m,
             shape = shape  
         )
-        print(f"velocity_m_s = {velocity_m_s}")
         
         # Calculate equivalent diameter for rectangular ducts
         if shape == "rect":
@@ -178,12 +175,9 @@ def calculate_air_pressure_loss_Pa(
         else:
             raise ValueError("Invalid duct shape. Use 'rect' or 'circle'")
             
-        print(f"equivalent_diameter = {equivalent_diameter}")
 
         reynolds_number = velocity_m_s * equivalent_diameter / kinematic_viscosity
-        print(f"reynolds_number = {reynolds_number}")
         dynamic_pressure_pa = 0.5 * air_density * (velocity_m_s ** 2)
-        print(f"dynamic_pressure_pa = {dynamic_pressure_pa}")
 
         if reynolds_number < 2300 and reynolds_number > 0:
             # Calculate friction coefficient laminar flow (формула Пуазейля)
@@ -201,7 +195,6 @@ def calculate_air_pressure_loss_Pa(
         else:
             raise ValueError(f"Error with reynolds_number = {reynolds_number}")
         
-        print(f"friction_coefficient = {friction_coefficient}")
 
         # Calculate total pressure loss (Henry Philibert Gaspard Darcy - Julius Ludwig Weisbach)
         pressure_loss_pa = friction_coefficient * (length_m / equivalent_diameter) * dynamic_pressure_pa
