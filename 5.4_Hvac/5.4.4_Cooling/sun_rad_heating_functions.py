@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 
 from typing import Literal
 
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+pd.set_option('display.width', 1000)
 
 begin = {'01': 0, '02': 0, '03': 0,}
 end = {'20': 0, '21': 0, '22': 0, '23': 0, '24': 0,}
@@ -258,41 +261,58 @@ def plot_df(df):
     sns.lineplot(data=df, x=df.index, y='e_Q_sun_kW', linestyle='--', label='Восток радиация, кВт', linewidth=1, ax=ax)
     sns.lineplot(data=df, x=df.index, y='n_Q_sun_kW', linestyle='--', label='Север радиация, кВт', linewidth=1, ax=ax)
     sns.lineplot(data=df, x=df.index, y='s_Q_sun_kW', linestyle='--', label='Юг радиация, кВт', linewidth=1, ax=ax)
-    sns.lineplot(data=df, x=df.index, y='Rad_kW', label='Суммарный радиация, кВт', linewidth=2, ax=ax)
-    sns.lineplot(data=df, x=df.index, y='Q_conduction_kW', label='Теплопроводность, кВт', linewidth=2, ax=ax)
-    sns.lineplot(data=df, x=df.index, y='Q_sum', label='Общий тепловой баланс, кВт', linewidth=3, ax=ax)
+
+    sns.lineplot(data=df, x=df.index, y='Q_people_kW', linestyle='dashdot', label='От людей, кВт', linewidth=1, ax=ax)
+    sns.lineplot(data=df, x=df.index, y='Q_appliances_kW', linestyle='dashdot', label='От техники, кВт', linewidth=1, ax=ax)
+
+    sns.lineplot(data=df, x=df.index, y='Q_heating_air_kW', linestyle='-', label='От приточного воздуха, кВт', linewidth=3, ax=ax)
+    sns.lineplot(data=df, x=df.index, y='Rad_kW', linestyle='-', label='Суммарный радиация, кВт', linewidth=3, ax=ax)
+    sns.lineplot(data=df, x=df.index, y='Q_conduction_kW', linestyle='-', label='Теплопроводность, кВт', linewidth=3, ax=ax)
+
+    sns.lineplot(data=df, x=df.index, y='Q_sum', label='Общий тепловой баланс, кВт', linewidth=4, ax=ax)
 
     ax.axhline(y=0, color='gray', linestyle='-', linewidth=1.5)
 
     # Находим максимумы и их позиции
-    max_Sum_kW = df['Rad_kW'].max()
+    max_Rad_kW = df['Rad_kW'].max()
     max_Q_conduction = df['Q_conduction_kW'].max()
     max_Q_sum = df['Q_sum'].max()
+    max_Q_heating_air_kW = df['Q_heating_air_kW'].max()
 
     idx_Sum_kW = df['Rad_kW'].idxmax()
     idx_Q_conduction = df['Q_conduction_kW'].idxmax()
     idx_Q_sum = df['Q_sum'].idxmax()
+    idx_Q_heating_air_kW = df['Q_heating_air_kW'].idxmax()
 
     # Добавляем текстовые аннотации
-    ax.annotate(f'Max: {max_Sum_kW:.1f} кВт',
-                xy=(idx_Sum_kW, max_Sum_kW),
+    ax.annotate(f'Радиация: {max_Rad_kW:.1f} кВт',
+                xy=(idx_Sum_kW, max_Rad_kW),
                 xytext=(10, 10),
-                textcoords='offset points',
-                bbox=dict(boxstyle='round,pad=0.3', facecolor='yellow', alpha=0.7),
-                arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0'),
-                fontsize=10,
-                fontweight='bold')
-
-    ax.annotate(f'Max: {max_Q_conduction:.1f} кВт',
-                xy=(idx_Q_conduction, max_Q_conduction),
-                xytext=(10, -20),
                 textcoords='offset points',
                 bbox=dict(boxstyle='round,pad=0.3', facecolor='lightblue', alpha=0.7),
                 arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0'),
-                fontsize=10,
+                fontsize=7,
                 fontweight='bold')
 
-    ax.annotate(f'Max: {max_Q_sum:.1f} кВт',
+    ax.annotate(f'Теплопередача: {max_Q_conduction:.1f} кВт',
+                xy=(idx_Q_conduction, max_Q_conduction),
+                xytext=(10, -20),
+                textcoords='offset points',
+                bbox=dict(boxstyle='round,pad=0.3', alpha=0.7),
+                arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0'),
+                fontsize=7,
+                fontweight='bold')
+
+    ax.annotate(f'Нагрев воздуха: {max_Q_heating_air_kW:.1f} кВт',
+                xy=(idx_Q_heating_air_kW, max_Q_heating_air_kW),
+                xytext=(-60, 20),
+                textcoords='offset points',
+                bbox=dict(boxstyle='round,pad=0.3', alpha=0.7),
+                arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0'),
+                fontsize=7,
+                fontweight='bold')
+    
+    ax.annotate(f'Баланс: {max_Q_sum:.1f} кВт',
                 xy=(idx_Q_sum, max_Q_sum),
                 xytext=(-60, 20),
                 textcoords='offset points',
@@ -300,17 +320,17 @@ def plot_df(df):
                 arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0'),
                 fontsize=10,
                 fontweight='bold')
+    
 
     # Улучшаем разметку оси Y
-    y_min = min(df['Rad_kW'].min(), df['Q_conduction_kW'].min(), df['Q_sum'].min())
-    y_max = max(max_Sum_kW, max_Q_conduction, max_Q_sum)
+    y_min = min(df['Rad_kW'].min(), df['Q_conduction_kW'].min(), df['Q_sum'].min(), df['Q_heating_air_kW'].min())
+    y_max = max(max_Rad_kW, max_Q_conduction, max_Q_sum)
     ax.set_ylim(y_min * 0.95, y_max * 1.05)  # небольшой запас по краям
 
     # Устанавливаем больше делений на оси Y
-    y_ticks_max =  np.linspace(0, y_max, 10)  
-    y_ticks_min =  np.linspace(0, y_min, 10)  
+    y_ticks =  np.linspace(y_min, y_max, 20)  
     
-    y_ticks = np.append(y_ticks_max, y_ticks_min)
+    # y_ticks = np.append(y_ticks_max, y_ticks_min)
 
     ax.set_yticks(y_ticks)
     ax.set_yticklabels([f'{y:.1f}' for y in y_ticks])
@@ -357,7 +377,6 @@ def calculatating_Qsum_conduction_kW(
         axis=1
     )
 
-    df['Q_sum'] = df['Q_conduction_kW']  + df['Rad_kW']
 
     return df 
 
@@ -367,9 +386,17 @@ def calculation_sun_kW(
         A_m2_e,
         A_m2_n,
         A_m2_s,
-        t_out_day_mid = 23,
+        Q_people_kW,
+        Q_appliances_kW,
+        L_m3_h = 0,
+        t_out_day_mid = 19,
+        t_in_air = 22,
         A_air_day = 24,
         R = 1.45,
+        K1 = 0.9,     
+        K2 = 1,     
+        K3 = 0.4,     
+        K4 = 0.34/0.87,
     ):
 
         A_full = A_m2_w + A_m2_e + A_m2_n + A_m2_s
@@ -378,37 +405,62 @@ def calculation_sun_kW(
             result_sun_base = df_sun_base, 
             A_m2= A_m2_w,
             orient = 'w',
+            K1=K1,
+            K2=K2,
+            K3=K3,
+            K4=K4,
         )
 
         result_e = calculate_sun_rad_heat(
             result_sun_base = df_sun_base, 
             A_m2= A_m2_e,
             orient = 'e',
+            K1=K1,
+            K2=K2,
+            K3=K3,
+            K4=K4,
         )
 
         result_n = calculate_sun_rad_heat(
             result_sun_base = df_sun_base, 
             A_m2= A_m2_n,
             orient = 'n',
+            K1=K1,
+            K2=K2,
+            K3=K3,
+            K4=K4,
         )
 
         result_s = calculate_sun_rad_heat(
             result_sun_base = df_sun_base, 
             A_m2= A_m2_s,
             orient = 's',
+            K1=K1,
+            K2=K2,
+            K3=K3,
+            K4=K4,
         )
 
         result = result_w.join([result_e, result_n, result_s])
+        result['Q_people_kW'] = Q_people_kW
+        result['Q_appliances_kW'] = Q_appliances_kW
 
         result['Rad_kW'] = result['e_Q_sun_kW'] + result['n_Q_sun_kW'] + result['w_Q_sun_kW'] + result['s_Q_sun_kW']
         result['theta_glass'] = theta_glass
 
-        result = calculatating_Qsum_conduction_kW(
+        df = calculatating_Qsum_conduction_kW(
             result,
             A_air_day,
             A_full, 
             R, 
             t_out_day_mid)
+            
+        df['t_air_out'] = (t_out_day_mid + 0.5 * A_air_day * result['theta_glass'])
+        df['delta_t_air_in_out'] = df['t_air_out'] - t_in_air
+        df['Q_heating_air_kW'] = round(df['delta_t_air_in_out'] * 1.2 * L_m3_h / 3600, 0)
+
+        df['Q_sum'] = df['Q_conduction_kW']  + df['Rad_kW'] + df['Q_people_kW'] + df['Q_appliances_kW'] + df['Q_heating_air_kW']
+        
 
         
-        return result
+        return df
